@@ -16,6 +16,11 @@ namespace Ferreteria
         {
             InitializeComponent();
             panelButton.Visible = false;
+            TimerWelcome.Start();
+            lblUsuario.Visible = false;
+            lblContraseña.Visible = false;
+            lblInfo.Visible = false;
+            
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -47,7 +52,13 @@ namespace Ferreteria
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+            lblTimer.Visible = false;
+            lblDate.Visible = false;
+            lblUsuario.Visible = true;
+            lblContraseña.Visible = true;
+            lblInfo.Visible = false;
+            lblUsuario.Text = "Usuario";
+            lblContraseña.Text = "Contraseña";
         }
 
         private void btnLogin_MouseMove(object sender, MouseEventArgs e)
@@ -62,6 +73,38 @@ namespace Ferreteria
             panelButton.Height = btnInfo.Height;
             panelButton.Top = btnInfo.Top - 55;
             panelButton.Visible = true;
+        }
+
+        private void btnWelcome_Click(object sender, EventArgs e)
+        {
+            lblTimer.Visible = true;
+            lblDate.Visible = true;
+            lblUsuario.Visible = false;
+            lblContraseña.Visible = false;
+            lblInfo.Visible = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTimer.Text = DateTime.Now.ToLongTimeString();
+            lblDate.Text = DateTime.Now.ToLongDateString();
+            
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            lblTimer.Visible = false;
+            lblDate.Visible = false;
+            lblUsuario.Visible = false;
+            lblContraseña.Visible = false;
+            lblInfo.Text = "         Proyecto #2" + Environment.NewLine + "    Programación III" + Environment.NewLine + Environment.NewLine + " Tiffany - Juan Daniel";
+            lblInfo.Visible = true;
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

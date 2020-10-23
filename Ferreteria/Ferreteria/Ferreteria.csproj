@@ -75,16 +75,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\informacion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\info.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BussinessObject\BussinessObject.csproj">
       <Project>{999f791e-3b20-40f3-abe2-4e7f8e132e9e}</Project>
       <Name>BussinessObject</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

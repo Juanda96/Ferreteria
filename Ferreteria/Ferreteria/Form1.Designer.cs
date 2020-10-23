@@ -30,9 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,18 +40,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnWelcome = new System.Windows.Forms.Button();
+            this.panelButton = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnInfo);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.btnWelcome);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -62,47 +64,16 @@
             this.panel1.Size = new System.Drawing.Size(193, 450);
             this.panel1.TabIndex = 0;
             // 
-            // button3
+            // label5
             // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
-            this.button3.Location = new System.Drawing.Point(0, 275);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(193, 101);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Información";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
-            this.button2.Location = new System.Drawing.Point(0, 168);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 101);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Inicio de sesión";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
-            this.button1.Location = new System.Drawing.Point(0, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 101);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Bienvenido";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Havelock Titling", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
+            this.label5.Location = new System.Drawing.Point(26, 412);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Proyecto #2 UTN";
             // 
             // panel5
             // 
@@ -186,22 +157,73 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel4.Controls.Add(this.panelButton);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(193, 55);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(607, 342);
             this.panel4.TabIndex = 3;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // label5
+            // btnInfo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Havelock Titling", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
-            this.label5.Location = new System.Drawing.Point(26, 412);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Proyecto #2 UTN";
+            this.btnInfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
+            this.btnInfo.Image = global::Ferreteria.Properties.Resources.info;
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnInfo.Location = new System.Drawing.Point(0, 275);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(193, 101);
+            this.btnInfo.TabIndex = 7;
+            this.btnInfo.Text = "Información";
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnInfo_MouseMove);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
+            this.btnLogin.Image = global::Ferreteria.Properties.Resources.construccion_y_herramientas;
+            this.btnLogin.Location = new System.Drawing.Point(0, 168);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(193, 101);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "Inicio de sesión";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnLogin_MouseMove);
+            // 
+            // btnWelcome
+            // 
+            this.btnWelcome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWelcome.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
+            this.btnWelcome.Image = global::Ferreteria.Properties.Resources.casa;
+            this.btnWelcome.Location = new System.Drawing.Point(0, 61);
+            this.btnWelcome.Name = "btnWelcome";
+            this.btnWelcome.Size = new System.Drawing.Size(193, 101);
+            this.btnWelcome.TabIndex = 5;
+            this.btnWelcome.Text = "Bienvenido";
+            this.btnWelcome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnWelcome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnWelcome.UseVisualStyleBackColor = true;
+            this.btnWelcome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnWelcome_MouseMove);
+            // 
+            // panelButton
+            // 
+            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
+            this.panelButton.Location = new System.Drawing.Point(0, 0);
+            this.panelButton.Name = "panelButton";
+            this.panelButton.Size = new System.Drawing.Size(10, 107);
+            this.panelButton.TabIndex = 0;
             // 
             // Form1
             // 
@@ -222,6 +244,7 @@
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -238,10 +261,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnWelcome;
+        private System.Windows.Forms.Button btnInfo;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panelButton;
     }
 }
 

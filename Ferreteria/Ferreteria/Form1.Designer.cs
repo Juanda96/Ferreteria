@@ -40,10 +40,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panelButton = new System.Windows.Forms.Panel();
             this.btnInfo = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnWelcome = new System.Windows.Forms.Button();
-            this.panelButton = new System.Windows.Forms.Panel();
+            this.TimerWelcome = new System.Windows.Forms.Timer(this.components);
+            this.lblTimer = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,7 +74,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Havelock Titling", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(172)))), ((int)(((byte)(183)))));
             this.label5.Location = new System.Drawing.Point(26, 412);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 13);
@@ -88,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Havelock Titling Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(172)))), ((int)(((byte)(183)))));
             this.label2.Location = new System.Drawing.Point(3, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(186, 25);
@@ -134,7 +140,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Havelock Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(20)))), ((int)(((byte)(70)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(172)))), ((int)(((byte)(183)))));
             this.label4.Location = new System.Drawing.Point(530, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 25);
@@ -146,7 +152,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Havelock Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(20)))), ((int)(((byte)(70)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(172)))), ((int)(((byte)(183)))));
             this.label3.Location = new System.Drawing.Point(565, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 25);
@@ -157,6 +163,11 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel4.Controls.Add(this.lblInfo);
+            this.panel4.Controls.Add(this.lblContraseña);
+            this.panel4.Controls.Add(this.lblUsuario);
+            this.panel4.Controls.Add(this.lblDate);
+            this.panel4.Controls.Add(this.lblTimer);
             this.panel4.Controls.Add(this.panelButton);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(193, 55);
@@ -164,6 +175,14 @@
             this.panel4.Size = new System.Drawing.Size(607, 342);
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // panelButton
+            // 
+            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
+            this.panelButton.Location = new System.Drawing.Point(0, 0);
+            this.panelButton.Name = "panelButton";
+            this.panelButton.Size = new System.Drawing.Size(10, 107);
+            this.panelButton.TabIndex = 0;
             // 
             // btnInfo
             // 
@@ -180,6 +199,7 @@
             this.btnInfo.Text = "Información";
             this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             this.btnInfo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnInfo_MouseMove);
             // 
             // btnLogin
@@ -215,15 +235,63 @@
             this.btnWelcome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnWelcome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnWelcome.UseVisualStyleBackColor = true;
+            this.btnWelcome.Click += new System.EventHandler(this.btnWelcome_Click);
             this.btnWelcome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnWelcome_MouseMove);
             // 
-            // panelButton
+            // TimerWelcome
             // 
-            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
-            this.panelButton.Location = new System.Drawing.Point(0, 0);
-            this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(10, 107);
-            this.panelButton.TabIndex = 0;
+            this.TimerWelcome.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Havelock Titling", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(172)))), ((int)(((byte)(183)))));
+            this.lblTimer.Location = new System.Drawing.Point(212, 125);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(0, 38);
+            this.lblTimer.TabIndex = 1;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Havelock Titling", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(50)))), ((int)(((byte)(110)))));
+            this.lblDate.Location = new System.Drawing.Point(138, 186);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 19);
+            this.lblDate.TabIndex = 2;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Havelock Titling", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(172)))), ((int)(((byte)(183)))));
+            this.lblUsuario.Location = new System.Drawing.Point(236, 95);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 23);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // lblContraseña
+            // 
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Font = new System.Drawing.Font("Havelock Titling", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(172)))), ((int)(((byte)(183)))));
+            this.lblContraseña.Location = new System.Drawing.Point(215, 188);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(0, 23);
+            this.lblContraseña.TabIndex = 4;
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Havelock Titling", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblInfo.Location = new System.Drawing.Point(218, 134);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(0, 13);
+            this.lblInfo.TabIndex = 5;
             // 
             // Form1
             // 
@@ -245,6 +313,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -266,6 +335,12 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelButton;
+        private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.Timer TimerWelcome;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
 

@@ -59,6 +59,8 @@ namespace Ferreteria
             lblInfo.Visible = false;
             lblUsuario.Text = "Usuario";
             lblContraseña.Text = "Contraseña";
+            txtUser.Visible = true;
+            txtPassword.Visible = true;
         }
 
         private void btnLogin_MouseMove(object sender, MouseEventArgs e)
@@ -82,6 +84,8 @@ namespace Ferreteria
             lblUsuario.Visible = false;
             lblContraseña.Visible = false;
             lblInfo.Visible = false;
+            txtUser.Visible = false;
+            txtPassword.Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -99,10 +103,60 @@ namespace Ferreteria
             lblContraseña.Visible = false;
             lblInfo.Text = "         Proyecto #2" + Environment.NewLine + "    Programación III" + Environment.NewLine + Environment.NewLine + " Tiffany - Juan Daniel";
             lblInfo.Visible = true;
-
+            txtUser.Visible = false;
+            txtPassword.Visible = false;
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (initSesion(e) == true)
+                {
+                    MessageBox.Show("Sesion iniciada");
+                }
+                else
+                {
+                    MessageBox.Show("Datos incompletos");
+                }
+            }
+        }
+
+        private bool initSesion(KeyEventArgs e) 
+        {
+            bool init = false;
+                if (txtUser.Text.Equals("") || txtPassword.Text.Equals(""))
+                {
+                    init = false;
+                }
+                else
+                { 
+                    init = true;
+                }
+            return init;
+        }
+
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (initSesion(e) == true)
+                {
+                    MessageBox.Show("Sesion iniciada");
+                }
+                else
+                {
+                    MessageBox.Show("Datos incompletos");
+                }
+            }
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LobbyCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LobbyCajero.Designer.cs">
+      <DependentUpon>LobbyCajero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -87,16 +93,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\info.png" />
+    <None Include="Resources\carpenter.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\casa.png" />
+    <None Include="Resources\carpenter%281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\construccion-y-herramientas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\senal-de-trafico.png" />
+    <None Include="Resources\home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

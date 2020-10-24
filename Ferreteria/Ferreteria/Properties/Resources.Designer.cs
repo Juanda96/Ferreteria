@@ -63,9 +63,9 @@ namespace Ferreteria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap casa {
+        internal static System.Drawing.Bitmap carpenter {
             get {
-                object obj = ResourceManager.GetObject("casa", resourceCulture);
+                object obj = ResourceManager.GetObject("carpenter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Ferreteria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap construccion_y_herramientas {
+        internal static System.Drawing.Bitmap carpenter_1_ {
             get {
-                object obj = ResourceManager.GetObject("construccion-y-herramientas", resourceCulture);
+                object obj = ResourceManager.GetObject("carpenter(1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,19 +83,9 @@ namespace Ferreteria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap info {
+        internal static System.Drawing.Bitmap home {
             get {
-                object obj = ResourceManager.GetObject("info", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap senal_de_trafico {
-            get {
-                object obj = ResourceManager.GetObject("senal-de-trafico", resourceCulture);
+                object obj = ResourceManager.GetObject("home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

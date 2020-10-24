@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ferreteria.Properties {
+namespace Entity.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -28,9 +28,9 @@ namespace Ferreteria.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JUANDANIEL-LAPT\\MSSQLSERVER01;Initial Catalog=Ferreteria;Integrated S" +
             "ecurity=True")]
-        public string FerreteriaConnectionString {
+        public string Ferreteria {
             get {
-                return ((string)(this["FerreteriaConnectionString"]));
+                return ((string)(this["Ferreteria"]));
             }
         }
     }

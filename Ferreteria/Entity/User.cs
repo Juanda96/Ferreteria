@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class User
+    public class User
     {
         private int _id;
         private int _dni;
@@ -15,13 +15,23 @@ namespace Entity
         private string _code;
         private string _type;
 
+        public User(int id, int dni, string name, string last, string code, string type)
+        {
+            _id = id;
+            _dni = dni;
+            _name = name;
+            _last = last;
+            _code = code;
+            _type = type;
+        }
+
         public int id
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        public int MyProperty
+        public int dni
         {
             set { _dni = value; }
             get { return _dni; }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BussinessObject;
+using Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Ferreteria
 {
     public partial class Login : Form
     {
+        UserBO ubo = new UserBO();
         public Login()
         {
             InitializeComponent();
@@ -47,7 +51,7 @@ namespace Ferreteria
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
-
+                
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -114,17 +118,7 @@ namespace Ferreteria
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (initSesion(e) == true)
-                {
-                    MessageBox.Show("Sesion iniciada");
-                }
-                else
-                {
-                    MessageBox.Show("Datos incompletos");
-                }
-            }
+            loginComprobation(e);
         }
 
         private bool initSesion(KeyEventArgs e) 
@@ -143,22 +137,71 @@ namespace Ferreteria
 
         private void txtUser_KeyDown(object sender, KeyEventArgs e)
         {
+            loginComprobation(e);
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginComprobation(KeyEventArgs e) {
             if (e.KeyCode == Keys.Enter)
             {
                 if (initSesion(e) == true)
                 {
-                    MessageBox.Show("Sesion iniciada");
+                    User logged = ubo.getLogin(int.Parse(txtUser.Text), txtPassword.Text);
+                    if (logged != null)
+                    {
+                        txtUser.Text = "";
+                        txtPassword.Text = "";
+                        if (logged.type.Equals("Administrador"))
+                        {
+                            LobbyAdministrador admin = new LobbyAdministrador(logged);
+                            admin.Show();
+                        }
+                        else if (logged.type.Equals("Vendedor"))
+                        {
+                            MessageBox.Show("Vendedor");
+                        }
+                        else if (logged.type.Equals("Cajero"))
+                        {
+                            MessageBox.Show("Cajero");
+                        }
+                        else if (logged.type.Equals("Transportista"))
+                        {
+                            MessageBox.Show("Transportista");
+                        }
+                        else if (logged.type.Equals("Bodegero"))
+                        {
+                            MessageBox.Show("Bodegero");
+                        }
+                        else if (logged.type.Equals("Contratista"))
+                        {
+                            MessageBox.Show("Contratista");
+                        }
+                        else if (logged.type.Equals("Cliente"))
+                        {
+                            MessageBox.Show("Cliente");
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Su usuario o contraseña es incorrecta");
+                    }
+                    
                 }
                 else
                 {
                     MessageBox.Show("Datos incompletos");
                 }
             }
-        }
-
-        private void txtUser_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

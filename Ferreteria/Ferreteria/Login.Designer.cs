@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnWelcome = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,6 +42,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -46,11 +51,6 @@
             this.lblTimer = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.TimerWelcome = new System.Windows.Forms.Timer(this.components);
-            this.btnInfo = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnWelcome = new System.Windows.Forms.Button();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,6 +81,60 @@
             this.label5.Size = new System.Drawing.Size(130, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "Proyecto #2 UTN";
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.Color.White;
+            this.btnInfo.Image = global::Ferreteria.Properties.Resources.carpenter;
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnInfo.Location = new System.Drawing.Point(0, 275);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(193, 101);
+            this.btnInfo.TabIndex = 7;
+            this.btnInfo.Text = "Información";
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            this.btnInfo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnInfo_MouseMove);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Image = global::Ferreteria.Properties.Resources.carpenter_1_;
+            this.btnLogin.Location = new System.Drawing.Point(0, 168);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(193, 101);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "Inicio de sesión";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnLogin_MouseMove);
+            // 
+            // btnWelcome
+            // 
+            this.btnWelcome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWelcome.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWelcome.ForeColor = System.Drawing.Color.White;
+            this.btnWelcome.Image = global::Ferreteria.Properties.Resources.home;
+            this.btnWelcome.Location = new System.Drawing.Point(0, 61);
+            this.btnWelcome.Name = "btnWelcome";
+            this.btnWelcome.Size = new System.Drawing.Size(193, 101);
+            this.btnWelcome.TabIndex = 5;
+            this.btnWelcome.Text = "Bienvenido";
+            this.btnWelcome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnWelcome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnWelcome.UseVisualStyleBackColor = true;
+            this.btnWelcome.Click += new System.EventHandler(this.btnWelcome_Click);
+            this.btnWelcome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnWelcome_MouseMove);
             // 
             // panel5
             // 
@@ -173,6 +227,31 @@
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Havelock Titling", 14.25F);
+            this.txtPassword.Location = new System.Drawing.Point(157, 229);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(288, 30);
+            this.txtPassword.TabIndex = 7;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Visible = false;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Font = new System.Drawing.Font("Havelock Titling", 14.25F);
+            this.txtUser.Location = new System.Drawing.Point(157, 134);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(288, 30);
+            this.txtUser.TabIndex = 6;
+            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUser.Visible = false;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
+            // 
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
@@ -236,85 +315,7 @@
             // 
             this.TimerWelcome.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnInfo
-            // 
-            this.btnInfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInfo.ForeColor = System.Drawing.Color.White;
-            this.btnInfo.Image = global::Ferreteria.Properties.Resources.carpenter;
-            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnInfo.Location = new System.Drawing.Point(0, 275);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(193, 101);
-            this.btnInfo.TabIndex = 7;
-            this.btnInfo.Text = "Información";
-            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnInfo.UseVisualStyleBackColor = true;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
-            this.btnInfo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnInfo_MouseMove);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Image = global::Ferreteria.Properties.Resources.carpenter_1_;
-            this.btnLogin.Location = new System.Drawing.Point(0, 168);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(193, 101);
-            this.btnLogin.TabIndex = 6;
-            this.btnLogin.Text = "Inicio de sesión";
-            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            this.btnLogin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnLogin_MouseMove);
-            // 
-            // btnWelcome
-            // 
-            this.btnWelcome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWelcome.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWelcome.ForeColor = System.Drawing.Color.White;
-            this.btnWelcome.Image = global::Ferreteria.Properties.Resources.home;
-            this.btnWelcome.Location = new System.Drawing.Point(0, 61);
-            this.btnWelcome.Name = "btnWelcome";
-            this.btnWelcome.Size = new System.Drawing.Size(193, 101);
-            this.btnWelcome.TabIndex = 5;
-            this.btnWelcome.Text = "Bienvenido";
-            this.btnWelcome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnWelcome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnWelcome.UseVisualStyleBackColor = true;
-            this.btnWelcome.Click += new System.EventHandler(this.btnWelcome_Click);
-            this.btnWelcome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnWelcome_MouseMove);
-            // 
-            // txtUser
-            // 
-            this.txtUser.Font = new System.Drawing.Font("Havelock Titling", 14.25F);
-            this.txtUser.Location = new System.Drawing.Point(157, 134);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(288, 30);
-            this.txtUser.TabIndex = 6;
-            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUser.Visible = false;
-            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
-            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Havelock Titling", 14.25F);
-            this.txtPassword.Location = new System.Drawing.Point(157, 229);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(288, 30);
-            this.txtPassword.TabIndex = 7;
-            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.Visible = false;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
-            // 
-            // Form1
+            // Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
@@ -324,7 +325,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);

@@ -1,4 +1,5 @@
 ﻿using Entity;
+using Ferreteria.Administrations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -111,6 +112,8 @@ namespace Ferreteria
             lblDate.Visible = false;
             lblTimer.Visible = false;
             lblAdmin.Visible = false;
+            readUser ru = new readUser();
+            ru.Show();
         }
 
         private void btnProduct_Click(object sender, EventArgs e)

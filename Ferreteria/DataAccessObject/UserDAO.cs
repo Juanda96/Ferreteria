@@ -15,7 +15,7 @@ namespace DataAccessObject
     {
         UserDA uda = new UserDA();
 
-        public LinkedList<User> GetUsers() 
+        public LinkedList<User> getUserLink() 
         {
             LinkedList<User> users = new LinkedList<User>();
             DataTable dataUsers = uda.selectUsers();
@@ -32,6 +32,11 @@ namespace DataAccessObject
                 }
             } while (reader.NextResult());
             return users;
+        }
+
+        public DataTable getUserDataTable()
+        {
+            return uda.selectUsers();
         }
 
     }

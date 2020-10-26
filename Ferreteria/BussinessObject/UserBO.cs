@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace BussinessObject
         public User getLogin(int user, string password) 
         {
             User u = null;
-            foreach (User item in udao.GetUsers())
+            foreach (User item in udao.getUserLink())
             {
                 if((user == item.dni) && password.Equals(item.password))
                 {
@@ -23,6 +24,11 @@ namespace BussinessObject
                 }
             }
             return u;
+        }
+
+        public DataTable getUsersDataTable() 
+        {
+            return udao.getUserDataTable();
         }
     }
 }

@@ -33,14 +33,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelButton = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnTransport = new System.Windows.Forms.Button();
             this.btnService = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnWelcome = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelButton = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
             this.timerWelcome = new System.Windows.Forms.Timer(this.components);
@@ -96,28 +96,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(193, 1080);
             this.panel5.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Havelock Titling Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
-            this.label2.Location = new System.Drawing.Point(37, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Admin.";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // panelButton
-            // 
-            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
-            this.panelButton.Location = new System.Drawing.Point(198, 68);
-            this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(10, 103);
-            this.panelButton.TabIndex = 6;
-            this.panelButton.Visible = false;
-            this.panelButton.Paint += new System.Windows.Forms.PaintEventHandler(this.panelButton_Paint);
             // 
             // btnClose
             // 
@@ -227,6 +205,28 @@
             this.btnWelcome.Click += new System.EventHandler(this.btnWelcome_Click);
             this.btnWelcome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnWelcome_MouseMove);
             this.btnWelcome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnWelcome_MouseUp);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Havelock Titling Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
+            this.label2.Location = new System.Drawing.Point(37, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Admin.";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // panelButton
+            // 
+            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
+            this.panelButton.Location = new System.Drawing.Point(194, 68);
+            this.panelButton.Name = "panelButton";
+            this.panelButton.Size = new System.Drawing.Size(10, 103);
+            this.panelButton.TabIndex = 6;
+            this.panelButton.Visible = false;
+            this.panelButton.Paint += new System.Windows.Forms.PaintEventHandler(this.panelButton_Paint);
             // 
             // lblDate
             // 

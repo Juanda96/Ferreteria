@@ -16,7 +16,7 @@ namespace DataAccess
 
         public DataTable selectUsers() 
         {
-            SqlCommand command = new SqlCommand("SELECT [id],[dni],[name],[last],[code],[type] FROM[Ferreteria].[UTN].[users]");
+            SqlCommand command = new SqlCommand("SELECT [id],[dni],[name],[last],[code],[type],[password] FROM[Ferreteria].[UTN].[users]",connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
             DataTable users = new DataTable();

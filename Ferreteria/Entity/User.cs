@@ -14,8 +14,9 @@ namespace Entity
         private string _last;
         private string _code;
         private string _type;
+        private string _password;
 
-        public User(int id, int dni, string name, string last, string code, string type)
+        public User(int id, int dni, string name, string last, string code, string type, string password)
         {
             _id = id;
             _dni = dni;
@@ -23,6 +24,8 @@ namespace Entity
             _last = last;
             _code = code;
             _type = type;
+            _password = password;
+
         }
 
         public int id
@@ -59,6 +62,12 @@ namespace Entity
         {
             get { return _type; }
             set { _type = value; }
+        }
+
+        public string password
+        {
+            get { return _password; }
+            set { _password = value; }
         }
 
     }

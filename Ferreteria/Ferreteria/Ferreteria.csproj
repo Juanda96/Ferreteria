@@ -51,6 +51,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FerreteriaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Administrations\LobbyAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\LobbyAdministrador.Designer.cs">
+      <DependentUpon>LobbyAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administrations\LobbyAdministrador.resx">
+      <DependentUpon>LobbyAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +116,10 @@
       <Project>{999f791e-3b20-40f3-abe2-4e7f8e132e9e}</Project>
       <Name>BussinessObject</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{344c4f1c-3b95-4f14-95e2-0594dd8908bc}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\carpenter.png" />
@@ -119,6 +132,23 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cashiers\" />
+    <Folder Include="Clients\" />
+    <Folder Include="Contractors\" />
+    <Folder Include="Sales\" />
+    <Folder Include="Transports\" />
+    <Folder Include="Warehouses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

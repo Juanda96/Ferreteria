@@ -16,5 +16,10 @@ namespace Service.Administration
         {
             InitializeComponent();
         }
+
+        private void readService_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

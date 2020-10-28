@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvService = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnWelcome = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvService = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).BeginInit();
             this.SuspendLayout();
@@ -49,25 +49,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 0;
-            // 
-            // dgvService
-            // 
-            this.dgvService.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvService.Location = new System.Drawing.Point(242, 64);
-            this.dgvService.Name = "dgvService";
-            this.dgvService.Size = new System.Drawing.Size(728, 374);
-            this.dgvService.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
-            this.label1.Location = new System.Drawing.Point(40, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Servicios";
             // 
             // btnDelete
             // 
@@ -114,6 +95,25 @@
             this.btnWelcome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnWelcome.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
+            this.label1.Location = new System.Drawing.Point(40, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Servicios";
+            // 
+            // dgvService
+            // 
+            this.dgvService.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvService.Location = new System.Drawing.Point(242, 64);
+            this.dgvService.Name = "dgvService";
+            this.dgvService.Size = new System.Drawing.Size(728, 374);
+            this.dgvService.TabIndex = 1;
+            // 
             // readService
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -126,6 +126,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "readService";
             this.Text = "readService";
+            this.Load += new System.EventHandler(this.readService_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();

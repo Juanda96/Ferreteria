@@ -16,3 +16,19 @@ INSERT INTO UTN.users
 VALUES
 	('207500069','Juan Daniel', 'Pérez', 'ADM069','Administrador');
 
+CREATE TABLE UTN.serv(
+	id INT IDENTITY(1,1),
+	dni INT NOT NULL PRIMARY KEY,
+	name VARCHAR(20) NOT NULL,
+	last VARCHAR(20) NOT NULL,
+	cate VARCHAR(20) NOT NULL,
+	descri VARCHAR(20) NOT NULL,
+	precio VARCHAR(20) NOT NULL
+);
+
+
+INSERT INTO UTN.serv 
+	(dni,name,last,cate,descri,precio) 
+VALUES
+	('208010868','Tifanny', 'Artavia', 'Herramienta','Destornillador','5000');
+

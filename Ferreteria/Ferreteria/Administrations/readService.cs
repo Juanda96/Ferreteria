@@ -38,5 +38,5 @@ namespace Service.Administration
             this.WindowState = FormWindowState.Minimized;
 
         }
-    }
+    } 
 }

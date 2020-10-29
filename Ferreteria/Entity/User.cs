@@ -28,6 +28,16 @@ namespace Entity
 
         }
 
+        public User(int dni, string name, string last, string code, string type, string password)
+        {
+            _dni = dni;
+            _name = name;
+            _last = last;
+            _code = code;
+            _type = type;
+            _password = password;
+        }
+
         public int id
         {
             get { return _id; }

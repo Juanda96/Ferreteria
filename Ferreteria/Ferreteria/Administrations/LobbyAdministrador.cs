@@ -1,5 +1,6 @@
 ﻿using Entity;
 using Ferreteria.Administrations;
+using Service.Administration;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -112,7 +113,7 @@ namespace Ferreteria
             lblDate.Visible = false;
             lblTimer.Visible = false;
             lblAdmin.Visible = false;
-            readUser ru = new readUser();
+            userRead ru = new userRead();
             ru.Show();
         }
 
@@ -128,6 +129,8 @@ namespace Ferreteria
             lblAdmin.Visible = false;
             lblDate.Visible = false;
             lblTimer.Visible = false;
+            readService rs = new readService();
+            rs.Show();
         }
 
         private void btnTransport_Click(object sender, EventArgs e)

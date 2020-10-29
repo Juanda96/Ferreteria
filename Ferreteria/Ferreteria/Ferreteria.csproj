@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrations\readUser.cs">
+    <Compile Include="Administrations\userAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrations\readUser.Designer.cs">
-      <DependentUpon>readUser.cs</DependentUpon>
+    <Compile Include="Administrations\userAdd.Designer.cs">
+      <DependentUpon>userAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrations\serviceRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\serviceRead.Designer.cs">
+      <DependentUpon>serviceRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrations\userRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\userRead.Designer.cs">
+      <DependentUpon>userRead.cs</DependentUpon>
     </Compile>
     <Compile Include="FerreteriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -80,8 +92,14 @@
     <EmbeddedResource Include="Administrations\LobbyAdministrador.resx">
       <DependentUpon>LobbyAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrations\readUser.resx">
-      <DependentUpon>readUser.cs</DependentUpon>
+    <EmbeddedResource Include="Administrations\serviceRead.resx">
+      <DependentUpon>serviceRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\userAdd.resx">
+      <DependentUpon>userAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\userRead.resx">
+      <DependentUpon>userRead.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

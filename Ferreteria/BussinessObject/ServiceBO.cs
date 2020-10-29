@@ -9,16 +9,17 @@ using Entity;
 
 namespace BussinessObject
 {
-    public class UserBO
+    public class ServiceBO
     {
+        ServiceDAO sevDao = new ServiceDAO();
         UserDAO udao = new UserDAO();
 
-        public User getLogin(int user, string password) 
+        public User getLogin(int user, string password)
         {
             User u = null;
             foreach (User item in udao.getUserLink())
             {
-                if((user == item.dni) && password.Equals(item.password))
+                if ((user == item.dni) && password.Equals(item.password))
                 {
                     u = item;
                 }
@@ -26,15 +27,9 @@ namespace BussinessObject
             return u;
         }
 
-        public DataTable getUsersDataTable() 
+        public DataTable getServDataTable()
         {
-            return udao.getUserDataTable();
-        }
-
-        public void createUser(int dni,string name,string last,string type,string code,string pass)
-        {
-            User newUser = new User(dni,name,last,code,type,pass);
-            udao.addUSer(newUser);
+            return sevDao.getServDataTable();
         }
     }
 }

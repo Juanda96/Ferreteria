@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceBO.cs" />
     <Compile Include="UserBO.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -52,10 +53,6 @@
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{344c4f1c-3b95-4f14-95e2-0594dd8908bc}</Project>
       <Name>Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Service\Service.csproj">
-      <Project>{257ac112-0dff-4800-b474-380ea84c8037}</Project>
-      <Name>Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

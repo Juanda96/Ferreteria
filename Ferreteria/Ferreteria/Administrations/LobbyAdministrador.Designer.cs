@@ -50,11 +50,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Havelock Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(1844, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 25);
+            this.label4.Size = new System.Drawing.Size(19, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "-";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -62,11 +62,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Havelock Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(1879, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 25);
+            this.label3.Size = new System.Drawing.Size(23, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "x";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -74,11 +74,11 @@
             // lblAdmin
             // 
             this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Font = new System.Drawing.Font("Havelock Titling", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.Color.White;
             this.lblAdmin.Location = new System.Drawing.Point(870, 442);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(0, 19);
+            this.lblAdmin.Size = new System.Drawing.Size(0, 20);
             this.lblAdmin.TabIndex = 4;
             this.lblAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -94,14 +94,14 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(193, 1080);
+            this.panel5.Size = new System.Drawing.Size(193, 788);
             this.panel5.TabIndex = 5;
             // 
             // btnClose
             // 
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = global::Ferreteria.Properties.Resources.log_out;
             this.btnClose.Location = new System.Drawing.Point(0, 603);
@@ -119,7 +119,7 @@
             // 
             this.btnTransport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnTransport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransport.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTransport.ForeColor = System.Drawing.Color.White;
             this.btnTransport.Image = global::Ferreteria.Properties.Resources.truck_1_;
             this.btnTransport.Location = new System.Drawing.Point(0, 496);
@@ -137,7 +137,7 @@
             // 
             this.btnService.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnService.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnService.ForeColor = System.Drawing.Color.White;
             this.btnService.Image = global::Ferreteria.Properties.Resources.consult;
             this.btnService.Location = new System.Drawing.Point(0, 389);
@@ -155,7 +155,7 @@
             // 
             this.btnProduct.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduct.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.ForeColor = System.Drawing.Color.White;
             this.btnProduct.Image = global::Ferreteria.Properties.Resources.carpenter;
             this.btnProduct.Location = new System.Drawing.Point(0, 282);
@@ -173,7 +173,7 @@
             // 
             this.btnUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.Color.White;
             this.btnUser.Image = global::Ferreteria.Properties.Resources.carpenter_1_;
             this.btnUser.Location = new System.Drawing.Point(0, 175);
@@ -191,7 +191,7 @@
             // 
             this.btnWelcome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWelcome.Font = new System.Drawing.Font("Havelock Titling", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWelcome.ForeColor = System.Drawing.Color.White;
             this.btnWelcome.Image = global::Ferreteria.Properties.Resources.home;
             this.btnWelcome.Location = new System.Drawing.Point(0, 68);
@@ -209,11 +209,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Havelock Titling Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
             this.label2.Location = new System.Drawing.Point(37, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 25);
+            this.label2.Size = new System.Drawing.Size(84, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Admin.";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -231,21 +231,21 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Havelock Titling", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Location = new System.Drawing.Point(840, 553);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(0, 19);
+            this.lblDate.Size = new System.Drawing.Size(0, 20);
             this.lblDate.TabIndex = 8;
             // 
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Havelock Titling", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimer.ForeColor = System.Drawing.Color.White;
             this.lblTimer.Location = new System.Drawing.Point(914, 492);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(0, 38);
+            this.lblTimer.Size = new System.Drawing.Size(0, 37);
             this.lblTimer.TabIndex = 7;
             // 
             // timerWelcome
@@ -256,7 +256,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.panel5);

@@ -45,5 +45,20 @@ namespace Ferreteria.Administrations
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

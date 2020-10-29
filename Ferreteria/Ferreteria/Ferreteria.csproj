@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrations\readService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\readService.Designer.cs">
+      <DependentUpon>readService.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrations\readUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administrations\LobbyAdministrador.resx">
       <DependentUpon>LobbyAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\readService.resx">
+      <DependentUpon>readService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrations\readUser.resx">
       <DependentUpon>readUser.cs</DependentUpon>

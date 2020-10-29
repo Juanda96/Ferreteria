@@ -113,7 +113,7 @@ namespace Ferreteria
             lblDate.Visible = false;
             lblTimer.Visible = false;
             lblAdmin.Visible = false;
-            readUser ru = new readUser();
+            userRead ru = new userRead();
             ru.Show();
         }
 

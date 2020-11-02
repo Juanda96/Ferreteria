@@ -38,5 +38,10 @@ namespace Service.Administration
             this.WindowState = FormWindowState.Minimized;
 
         }
+
+        private void btnWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
     } 
 }

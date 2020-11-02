@@ -54,14 +54,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 650);
+            this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 0;
             // 
             // btnDelete
             // 
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnDelete.Image = global::Ferreteria.Properties.Resources.clear;
             this.btnDelete.Location = new System.Drawing.Point(3, 308);
             this.btnDelete.Name = "btnDelete";
@@ -76,7 +76,7 @@
             // 
             this.btnUser.FlatAppearance.BorderSize = 0;
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
+            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnUser.Image = global::Ferreteria.Properties.Resources.refresh_button;
             this.btnUser.Location = new System.Drawing.Point(3, 187);
             this.btnUser.Name = "btnUser";
@@ -91,7 +91,7 @@
             // 
             this.btnWelcome.FlatAppearance.BorderSize = 0;
             this.btnWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWelcome.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
+            this.btnWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnWelcome.Image = global::Ferreteria.Properties.Resources.add;
             this.btnWelcome.Location = new System.Drawing.Point(3, 77);
             this.btnWelcome.Name = "btnWelcome";
@@ -101,15 +101,15 @@
             this.btnWelcome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnWelcome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnWelcome.UseVisualStyleBackColor = true;
+            this.btnWelcome.Click += new System.EventHandler(this.btnWelcome_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Havelock Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
-            this.label1.Location = new System.Drawing.Point(21, 25);
+            this.label1.Location = new System.Drawing.Point(40, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 25);
+            this.label1.Size = new System.Drawing.Size(109, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Servicios";
             // 
@@ -167,7 +167,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1028, 9);
+            this.label3.Location = new System.Drawing.Point(981, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 25);
             this.label3.TabIndex = 9;
@@ -179,7 +179,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1003, 9);
+            this.label4.Location = new System.Drawing.Point(956, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(19, 25);
             this.label4.TabIndex = 10;
@@ -190,7 +190,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(1063, 650);
+            this.ClientSize = new System.Drawing.Size(1059, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvService);

@@ -30,5 +30,11 @@ namespace BussinessObject
         {
             return udao.getUserDataTable();
         }
+
+        public void createUser(int dni,string name,string last,string type,string code,string pass)
+        {
+            User newUser = new User(dni,name,last,code,type,pass);
+            udao.addUSer(newUser);
+        }
     }
 }

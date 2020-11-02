@@ -39,5 +39,12 @@ namespace DataAccessObject
             return uda.selectUsers();
         }
 
+        public void addUSer(User u) 
+        {
+            string value = "'"+u.dni+"','"+u.name+"','"+u.last+"','"+u.code+"','"+u.type+"','"+u.password+"'";
+            string SQL = "INSERT INTO UTN.users (dni, name, last, code, type,password) VALUES ("+value+")";
+            uda.addUser(SQL);
+        }
+
     }
 }

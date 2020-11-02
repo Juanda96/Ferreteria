@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Ferreteria.Administrations
 {
-    public partial class readUser : Form
+    public partial class userRead : Form
     {
         UserBO ubo = new UserBO();
-        public readUser()
+        public userRead()
         {
             InitializeComponent();
         }
@@ -39,16 +39,17 @@ namespace Ferreteria.Administrations
         private void label3_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        } 
 
         private void label4_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized;   
         }
 
         private void btnWelcome_Click(object sender, EventArgs e)
         {
-
+            userAdd ud = new userAdd();
+            ud.Show();
         }
 
         private void btnUser_Click(object sender, EventArgs e)

@@ -19,10 +19,10 @@ namespace DataAccess
             SqlCommand command = new SqlCommand("SELECT [id],[name],[cate],[descri],[price] FROM[Ferreteria].[UTN].[serv]", connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
-            DataTable serv = new DataTable();
-            data.Fill(serv);
+            DataTable service = new DataTable();
+            data.Fill(service);
 
-            return serv;
+            return service;
         }
 
         public void audServ(string SQL)

@@ -122,6 +122,8 @@ namespace Ferreteria
             lblAdmin.Visible = false;
             lblDate.Visible = false;
             lblTimer.Visible = false;
+            productRead pr = new productRead();
+            pr.Show();
         }
 
         private void btnService_Click(object sender, EventArgs e)

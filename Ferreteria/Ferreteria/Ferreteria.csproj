@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrations\ProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\ProductAdd.Designer.cs">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrations\productRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\productRead.Designer.cs">
+      <DependentUpon>productRead.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrations\serviceAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administrations\LobbyAdministrador.resx">
       <DependentUpon>LobbyAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\ProductAdd.resx">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\productRead.resx">
+      <DependentUpon>productRead.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrations\serviceAdd.resx">
       <DependentUpon>serviceAdd.cs</DependentUpon>

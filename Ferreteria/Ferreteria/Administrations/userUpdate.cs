@@ -90,6 +90,7 @@ namespace Ferreteria.Administrations
             else
             {
                 ubo.updateUser(int.Parse(txtDNI.Text), txtName.Text, txtLast.Text, cmbType.Text, lblCodigo.Text, txtPass.Text,user);
+                MessageBox.Show("¡Actualizado con exito!");
             }
         }
     }

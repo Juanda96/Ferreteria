@@ -54,7 +54,6 @@ namespace DataAccessObject
 
         public void updateUser(User u, int dni) 
         {
-            string value = "'" + u.dni + "','" + u.name + "','" + u.last + "','" + u.code + "','" + u.type + "','" + u.password + "'";
             string SQL = "UPDATE UTN.users SET dni = '" + u.dni + "', name = '" + u.name + "', last = '" + u.last + "', code = '" + u.code + "', type = '" + u.type + "',password = '" + u.password +"' WHERE dni = '"+ dni+"'";
             uda.audUser(SQL);
         }

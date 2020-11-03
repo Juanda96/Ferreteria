@@ -267,7 +267,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(655, 260);
+            this.Location = new System.Drawing.Point(657, 260);
             this.Name = "userAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "addUser";

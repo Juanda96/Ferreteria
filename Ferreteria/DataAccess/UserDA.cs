@@ -12,7 +12,7 @@ namespace DataAccess
     public class UserDA
     {
         //DataBase connection
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionDB"].ConnectionString);
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
 
         public DataTable selectUsers() 
         {
@@ -25,7 +25,7 @@ namespace DataAccess
             return users;
         }
 
-        public void addUser(string SQL) 
+        public void audUser(string SQL) 
         {
             SqlCommand command = new SqlCommand(SQL, connection);
             try

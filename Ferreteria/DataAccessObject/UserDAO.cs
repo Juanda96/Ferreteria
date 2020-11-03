@@ -43,7 +43,7 @@ namespace DataAccessObject
         {
             string value = "'"+u.dni+"','"+u.name+"','"+u.last+"','"+u.code+"','"+u.type+"','"+u.password+"'";
             string SQL = "INSERT INTO UTN.users (dni, name, last, code, type,password) VALUES ("+value+")";
-            uda.addUser(SQL);
+            uda.audUser(SQL);
         }
 
     }

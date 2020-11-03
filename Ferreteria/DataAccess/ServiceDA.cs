@@ -12,7 +12,7 @@ namespace DataAccess
     public class ServiceDA
     {
         //DataBase connection
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionDB"].ConnectionString);
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
 
         public DataTable selectServ()
         {
@@ -25,7 +25,7 @@ namespace DataAccess
             return serv;
         }
 
-        public void addServ(string SQL)
+        public void audServ(string SQL)
         {
             SqlCommand command = new SqlCommand(SQL, connection);
             try

@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Ferreteria.Administrations
 {
-    public partial class productRead : Form
+    public partial class ProductRead : Form
     {
         ProductBO pbo = new ProductBO();
-        public productRead()
+        public ProductRead()
         {
             InitializeComponent();
         }
@@ -40,6 +40,28 @@ namespace Ferreteria.Administrations
         private void label4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnEditProduct_Click(object sender, EventArgs e)
+        {
+            ProductUpdate pu = new ProductUpdate(pbo.getLinkedProduct(), Convert.ToInt32(dgvProduct.CurrentRow.Cells[0].Value));
+            pu.Show();
+        }
+
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            if (dgvProduct.SelectedRows.Count < 0 && dgvProduct.CurrentCell.RowIndex != 1)
+            {
+                MessageBox.Show("Seleccione una cedula");
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Desea eliminar a '" + dgvProduct.CurrentRow.Cells[1].Value, "Eliminar usuario", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    pbo.deleteProduct(Convert.ToInt32(dgvProduct.CurrentRow.Cells[0].Value));
+                }
+            }
         }
     }
 }

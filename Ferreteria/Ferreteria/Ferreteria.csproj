@@ -52,11 +52,17 @@
     <Compile Include="Administrations\ProductAdd.Designer.cs">
       <DependentUpon>ProductAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrations\productRead.cs">
+    <Compile Include="Administrations\ProductRead.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrations\productRead.Designer.cs">
-      <DependentUpon>productRead.cs</DependentUpon>
+    <Compile Include="Administrations\ProductRead.Designer.cs">
+      <DependentUpon>ProductRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrations\ProductUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\ProductUpdate.Designer.cs">
+      <DependentUpon>ProductUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrations\serviceAdd.cs">
       <SubType>Form</SubType>
@@ -119,8 +125,11 @@
     <EmbeddedResource Include="Administrations\ProductAdd.resx">
       <DependentUpon>ProductAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrations\productRead.resx">
-      <DependentUpon>productRead.cs</DependentUpon>
+    <EmbeddedResource Include="Administrations\ProductRead.resx">
+      <DependentUpon>ProductRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\ProductUpdate.resx">
+      <DependentUpon>ProductUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrations\serviceAdd.resx">
       <DependentUpon>serviceAdd.cs</DependentUpon>

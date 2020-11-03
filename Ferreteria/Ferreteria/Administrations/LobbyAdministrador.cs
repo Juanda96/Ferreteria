@@ -122,7 +122,7 @@ namespace Ferreteria
             lblAdmin.Visible = false;
             lblDate.Visible = false;
             lblTimer.Visible = false;
-            productRead pr = new productRead();
+            ProductRead pr = new ProductRead();
             pr.Show();
         }
 

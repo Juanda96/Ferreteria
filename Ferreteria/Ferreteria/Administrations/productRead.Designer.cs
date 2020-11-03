@@ -1,6 +1,6 @@
 ﻿namespace Ferreteria.Administrations
 {
-    partial class productRead
+    partial class ProductRead
     {
         /// <summary>
         /// Required designer variable.
@@ -37,10 +37,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.btnEditProduct = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -130,17 +130,6 @@
             this.panel5.Size = new System.Drawing.Size(193, 650);
             this.panel5.TabIndex = 10;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Havelock Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
-            this.label2.Location = new System.Drawing.Point(12, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Productos";
-            // 
             // btnDeleteProduct
             // 
             this.btnDeleteProduct.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
@@ -156,6 +145,7 @@
             this.btnDeleteProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDeleteProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
             // btnEditProduct
             // 
@@ -172,6 +162,7 @@
             this.btnEditProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEditProduct.UseVisualStyleBackColor = true;
+            this.btnEditProduct.Click += new System.EventHandler(this.btnEditProduct_Click);
             // 
             // btnAddProduct
             // 
@@ -190,7 +181,18 @@
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // productRead
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Havelock Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
+            this.label2.Location = new System.Drawing.Point(12, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Productos";
+            // 
+            // ProductRead
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -202,7 +204,7 @@
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(194, 200);
-            this.Name = "productRead";
+            this.Name = "ProductRead";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "productRead";
             this.Load += new System.EventHandler(this.productRead_Load);

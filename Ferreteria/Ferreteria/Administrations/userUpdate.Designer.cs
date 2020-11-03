@@ -55,6 +55,7 @@
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(295, 23);
             this.txtPass.TabIndex = 41;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // label9
             // 
@@ -66,6 +67,7 @@
             this.label9.Size = new System.Drawing.Size(128, 16);
             this.label9.TabIndex = 40;
             this.label9.Text = "Constraseña";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // lblCodigo
             // 
@@ -77,6 +79,7 @@
             this.lblCodigo.Size = new System.Drawing.Size(83, 16);
             this.lblCodigo.TabIndex = 39;
             this.lblCodigo.Text = "gen cod";
+            this.lblCodigo.Click += new System.EventHandler(this.lblCodigo_Click);
             // 
             // label8
             // 
@@ -88,6 +91,7 @@
             this.label8.Size = new System.Drawing.Size(75, 16);
             this.label8.TabIndex = 38;
             this.label8.Text = "Codigo";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // cmbType
             // 
@@ -115,6 +119,7 @@
             this.label7.Size = new System.Drawing.Size(49, 16);
             this.label7.TabIndex = 36;
             this.label7.Text = "Tipo";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtLast
             // 
@@ -123,6 +128,7 @@
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(295, 23);
             this.txtLast.TabIndex = 35;
+            this.txtLast.TextChanged += new System.EventHandler(this.txtLast_TextChanged);
             // 
             // label6
             // 
@@ -134,6 +140,7 @@
             this.label6.Size = new System.Drawing.Size(92, 16);
             this.label6.TabIndex = 34;
             this.label6.Text = "Apellido";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtName
             // 
@@ -142,6 +149,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(295, 23);
             this.txtName.TabIndex = 33;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label5
             // 
@@ -153,6 +161,7 @@
             this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 32;
             this.label5.Text = "Nombre";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label2
             // 
@@ -164,6 +173,7 @@
             this.label2.Size = new System.Drawing.Size(309, 25);
             this.label2.TabIndex = 31;
             this.label2.Text = "Actualizar Usuario";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtDNI
             // 
@@ -172,6 +182,7 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(295, 23);
             this.txtDNI.TabIndex = 30;
+            this.txtDNI.TextChanged += new System.EventHandler(this.txtDNI_TextChanged);
             // 
             // label1
             // 
@@ -183,6 +194,7 @@
             this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 29;
             this.label1.Text = "Cedula";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label4
             // 
@@ -194,6 +206,7 @@
             this.label4.Size = new System.Drawing.Size(19, 25);
             this.label4.TabIndex = 28;
             this.label4.Text = "-";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -222,6 +235,7 @@
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnuUpdate
             // 
@@ -245,7 +259,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(770, 479);
+            this.ClientSize = new System.Drawing.Size(786, 518);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnuUpdate);
             this.Controls.Add(this.txtPass);

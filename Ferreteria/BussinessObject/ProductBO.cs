@@ -28,9 +28,9 @@ namespace BussinessObject
             pdao.addProduct(newProduct);
         }
 
-        public void updateProduct(int id, string name, string category, string description, int price, int oldId)
+        public void updateProduct(string name, string category, string description, int price, int oldId)
         {
-            Product newProduct = new Product(id, name, category, description, price);
+            Product newProduct = new Product(name, category, description, price);
             pdao.updateProduct(newProduct, oldId);
         }
 

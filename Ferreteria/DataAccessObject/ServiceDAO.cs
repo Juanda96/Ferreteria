@@ -15,6 +15,7 @@ namespace DataAccessObject
     {
         ServiceDA sev = new ServiceDA();
 
+
         public LinkedList<Service> getServLink()
         {
             LinkedList<Service> serv = new LinkedList<Service>();
@@ -26,7 +27,7 @@ namespace DataAccessObject
                 {
                     while (reader.Read())
                     {
-                        Service servi = new Service(int.Parse(reader[0].ToString()), int.Parse(reader[1].ToString()), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString());
+                        Service servi = new Service(int.Parse(reader[0].ToString()),  reader[1].ToString(), reader[2].ToString(), reader[3].ToString(),int.Parse(reader[4].ToString()));
                         serv.AddLast(servi);
                     }
                 }
@@ -38,7 +39,12 @@ namespace DataAccessObject
         {
             return sev.selectServ();
         }
-
+        public void addServ(Service s)
+        {
+            string value = "'" +s.name + "','" + s.cate + "','" + s.descri + "','" + s.price + "'";
+            string SQL = "INSERT INTO UTN.serv (name, cate, descri, price) VALUES (" + value + ")";
+            sev.addServ(SQL);
+        }
     }
 }
 

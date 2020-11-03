@@ -9,46 +9,40 @@ namespace Entity
     public class Service
     {
             private int _id;
-            private int _dni;
             private string _name;
-            private string _last;
             private string _cate;
-            private string _desc;
-            private string _precio;
+            private string _descri;
+            private int _price;
 
-            public Service(int id, int dni, string name, string last, string cate, string desc, string precio)
+            public Service(int id,  string name, string cate, string descri, int price)
             {
                 _id = id;
-                _dni = dni;
                 _name = name;
-                _last = last;
                 _cate = cate;
-                _desc = desc;
-                _precio = precio;
+                _descri = descri;
+                _price = price;
             }
 
-            public int id
+        public Service(string name, string cate, string desc, int price)
+        {
+            this.name = name;
+            this.cate = cate;
+            this.descri = desc;
+            this.price = price;
+            
+        }
+
+        public int id
             {
                 get { return _id; }
                 set { _id = value; }
             }
 
-            public int dni
-            {
-                set { _dni = value; }
-                get { return _dni; }
-            }
 
             public string name
             {
                 get { return _name; }
                 set { _name = value; }
-            }
-
-            public string last
-            {
-                get { return _last; }
-                set { _last = value; }
             }
 
             public string cate
@@ -57,16 +51,16 @@ namespace Entity
                 set { _cate = value; }
             }
 
-            public string desc
+            public string descri
             {
-                get { return _desc; }
-                set { _desc = value; }
+                get { return _descri; }
+                set { _descri = value; }
             }
 
-            public string precio
+            public int price
             {
-                get { return _precio; }
-                set { _precio = value; }
+                get { return _price; }
+                set { _price = value; }
             }
         }
     }

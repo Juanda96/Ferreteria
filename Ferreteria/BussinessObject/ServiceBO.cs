@@ -11,7 +11,7 @@ namespace BussinessObject
 {
     public class ServiceBO
     {
-        ServiceDAO sevDao = new ServiceDAO();
+        ServiceDAO sDao = new ServiceDAO();
         UserDAO udao = new UserDAO();
 
         public User getLogin(int user, string password)
@@ -29,7 +29,14 @@ namespace BussinessObject
 
         public DataTable getServDataTable()
         {
-            return sevDao.getServDataTable();
+            return sDao.getServDataTable();
+        }
+
+        public void createServ(string name, string cate, string descri, int price)
+        {
+            Service newServ = new Service(name, cate, descri, price);
+            sDao.addServ(newServ);
         }
     }
 }
+

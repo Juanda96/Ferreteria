@@ -1,6 +1,6 @@
 ﻿using Entity;
+using Ferreteria.Administration;
 using Ferreteria.Administrations;
-using Service.Administration;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -129,7 +129,7 @@ namespace Ferreteria
             lblAdmin.Visible = false;
             lblDate.Visible = false;
             lblTimer.Visible = false;
-            readService rs = new readService();
+            serviceRead rs = new serviceRead();
             rs.Show();
         }
 

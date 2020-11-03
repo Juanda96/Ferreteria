@@ -1,6 +1,6 @@
-﻿namespace Service.Administration
+﻿namespace Ferreteria.Administration
 {
-    partial class readService
+    partial class serviceRead
     {
         /// <summary>
         /// Required designer variable.

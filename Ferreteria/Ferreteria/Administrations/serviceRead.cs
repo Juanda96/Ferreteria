@@ -1,4 +1,5 @@
 ﻿using BussinessObject;
+using Ferreteria.Administrations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,13 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Service.Administration
+namespace Ferreteria.Administration
 {
-    public partial class readService : Form
+    public partial class serviceRead : Form
     {
            ServiceBO sbo = new ServiceBO();
 
-        public readService()
+        public serviceRead()
         {
             InitializeComponent();
         }
@@ -41,7 +42,8 @@ namespace Service.Administration
 
         private void btnWelcome_Click(object sender, EventArgs e)
         {
-
+            serviceAdd sd = new serviceAdd();
+            sd.Show();
         }
     } 
 }

@@ -70,6 +70,12 @@
     <Compile Include="Administrations\userRead.Designer.cs">
       <DependentUpon>userRead.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrations\userUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\userUpdate.Designer.cs">
+      <DependentUpon>userUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FerreteriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrations\userRead.resx">
       <DependentUpon>userRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\userUpdate.resx">
+      <DependentUpon>userUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -207,6 +207,7 @@
             this.txtPass.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
             this.txtPass.Location = new System.Drawing.Point(196, 427);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(295, 23);
             this.txtPass.TabIndex = 24;
             // 

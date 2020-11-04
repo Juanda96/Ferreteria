@@ -52,11 +52,11 @@ namespace Ferreteria.Administrations
         {
             if (dgvProduct.SelectedRows.Count < 0 && dgvProduct.CurrentCell.RowIndex != 1)
             {
-                MessageBox.Show("Seleccione una cedula");
+                MessageBox.Show("Seleccione una producto");
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show("Desea eliminar a '" + dgvProduct.CurrentRow.Cells[1].Value, "Eliminar usuario", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Desea eliminar '" + dgvProduct.CurrentRow.Cells[1].Value+"'", "Eliminar Producto", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     pbo.deleteProduct(Convert.ToInt32(dgvProduct.CurrentRow.Cells[0].Value));

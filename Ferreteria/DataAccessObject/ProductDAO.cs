@@ -24,7 +24,7 @@ namespace DataAccessObject
                 {
                     while (reader.Read())
                     {
-                        Product product = new Product(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), int.Parse(reader[4].ToString()));
+                        Product product = new Product(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), int.Parse(reader[4].ToString()), int.Parse(reader[5].ToString()));
                         products.AddLast(product);
                     }
                 }
@@ -39,7 +39,7 @@ namespace DataAccessObject
 
         public void addProduct(Product p)
         {
-            string value = "'" + p.name + "','" + p.category + "','" + p.description + "','" + p.price + "'";
+            string value = "'" + p.name + "','" + p.category + "','" + p.description + "','" + p.price + "'" + "','" + p.quantity + "'";
             string SQL = "INSERT INTO UTN.product (name, category, description, price) VALUES (" + value + ")";
             pda.audProduct(SQL);
         }
@@ -52,7 +52,7 @@ namespace DataAccessObject
 
         public void updateProduct(Product p, int id)
         {
-            string SQL = "UPDATE UTN.product SET name = '" + p.name + "', category = '" + p.category + "', description = '" + p.description + "', price = '" + p.price + "' WHERE id = '" + id + "'";
+            string SQL = "UPDATE UTN.product SET name = '" + p.name + "', category = '" + p.category + "', description = '" + p.description + "', price = '" + p.price + "'"+ "','" + p.quantity + "' WHERE id = '" + id + "'";
             pda.audProduct(SQL);
         }
     }

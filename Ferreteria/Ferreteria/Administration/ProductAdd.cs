@@ -32,7 +32,7 @@ namespace Ferreteria.Administrations
             }
             else
             {
-                pbo.createProduct(txtName.Text, txtCategory.Text, txtDescription.Text, int.Parse(txtPrice.Text));
+                pbo.createProduct(txtName.Text, txtCategory.Text, txtDescription.Text, int.Parse(txtPrice.Text), int.Parse(txtQuantity.Text));
                 MessageBox.Show("¡Agregado con exito!");
             }
         }

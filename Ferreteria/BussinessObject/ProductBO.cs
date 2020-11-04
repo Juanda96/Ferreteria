@@ -22,15 +22,15 @@ namespace BussinessObject
             return pdao.getProductDataTable();
         }
 
-        public void createProduct( string name, string category, string description, int price)
+        public void createProduct( string name, string category, string description, int price,int quantity)
         {
-            Product newProduct = new Product(name, category, description, price);
+            Product newProduct = new Product(name, category, description, price,quantity);
             pdao.addProduct(newProduct);
         }
 
-        public void updateProduct(string name, string category, string description, int price, int oldId)
+        public void updateProduct(string name, string category, string description, int price,int quantity, int oldId)
         {
-            Product newProduct = new Product(name, category, description, price);
+            Product newProduct = new Product(name, category, description, price,quantity);
             pdao.updateProduct(newProduct, oldId);
         }
 

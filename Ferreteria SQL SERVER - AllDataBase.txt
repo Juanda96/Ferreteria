@@ -33,3 +33,27 @@ INSERT INTO UTN.serv
 	(name,cate,descri,price) 
 VALUES
 	('Electricidad','Construccion','Instalacion de electricidad','30000');
+
+
+CREATE TABLE UTN.product (
+id INT IDENTITY(1,1)PRIMARY KEY,
+	name VARCHAR(20) NOT NULL,
+	category VARCHAR(20) NOT NULL,
+	description VARCHAR(100) NOT NULL,
+	price INT NOT NULL,
+	quantity INT NOT NULL)
+
+
+INSERT INTO UTN.product
+	(name, category, description,price,quantity)
+VALUES 
+	('Martillo','Herramienta','Martillo con estructura de acero','7500','20');
+
+CREATE TABLE UTN.transport(
+	id INT IDENTITY(1,1)PRIMARY KEY,
+	idcar VARCHAR(6) NOT NULL UNIQUE,
+	iduser INT NOT NULL,
+	FOREIGN KEY (iduser) REFERENCES UTN.users(dni)
+)
+
+INSERT INTO UTN.transport(idcar,iduser) VALUES ('ABC123','204900658')

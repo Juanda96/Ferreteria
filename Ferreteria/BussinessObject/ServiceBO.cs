@@ -14,19 +14,6 @@ namespace BussinessObject
         ServiceDAO sDao = new ServiceDAO();
         UserDAO udao = new UserDAO();
 
-        public User getLogin(int user, string password)
-        {
-            User u = null;
-            foreach (User item in udao.getUserLink())
-            {
-                if ((user == item.dni) && password.Equals(item.password))
-                {
-                    u = item;
-                }
-            }
-            return u;
-        }
-
         public DataTable getServDataTable()
         {
             return sDao.getServDataTable();

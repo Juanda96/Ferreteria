@@ -32,7 +32,7 @@ namespace Ferreteria.Administrations
             }
             else
             {
-                pbo.updateProduct(txtName.Text, txtCategory.Text, txtDescription.Text, int.Parse(txtPrice.Text),product);
+                pbo.updateProduct(txtName.Text, txtCategory.Text, txtDescription.Text, int.Parse(txtPrice.Text), int.Parse(txtQuantity.Text), product);
                 MessageBox.Show("¡Actualizado con exito!");
             }
         }
@@ -46,7 +46,8 @@ namespace Ferreteria.Administrations
                     txtName.Text = product.name;
                     txtCategory.Text = product.category;
                     txtDescription.Text = product.description;
-                    txtPrice.Text = ""+product.price;
+                    txtPrice.Text = "" + product.price;
+                    txtQuantity.Text = "" + product.quantity;
                 }
             }
         }

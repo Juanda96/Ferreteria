@@ -13,22 +13,32 @@ namespace Entity
         private string _category;
         private string _description;
         private int _price;
+        private int _quantity;
 
-        public Product(int id, string name, string category, string description, int price)
+        
+
+
+        public Product(int id, string name, string category, string description, int price,int quantity)
         {
             _id = id;
             _name = name;
             _category = category;
             _description = description;
             _price = price;
+            _quantity = quantity;
         }
 
-        public Product(string name, string category, string description, int price)
+        public Product(string name, string category, string description, int price, int quantity)
         {
             _name = name;
             _category = category;
             _description = description;
             _price = price;
+        }
+        public int quantity
+        {
+            get { return _quantity; }
+            set { _quantity = value; }
         }
 
         public int price

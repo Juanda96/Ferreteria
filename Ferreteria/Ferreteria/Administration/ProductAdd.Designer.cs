@@ -41,6 +41,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.RichTextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -80,7 +82,7 @@
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
-            this.txtPrice.Location = new System.Drawing.Point(197, 427);
+            this.txtPrice.Location = new System.Drawing.Point(197, 416);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(295, 23);
             this.txtPrice.TabIndex = 41;
@@ -90,7 +92,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(54, 432);
+            this.label9.Location = new System.Drawing.Point(54, 421);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 16);
             this.label9.TabIndex = 40;
@@ -101,7 +103,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(54, 220);
+            this.label7.Location = new System.Drawing.Point(54, 209);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 16);
             this.label7.TabIndex = 36;
@@ -183,11 +185,30 @@
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
-            this.txtDescription.Location = new System.Drawing.Point(197, 219);
+            this.txtDescription.Location = new System.Drawing.Point(197, 209);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(295, 181);
+            this.txtDescription.Size = new System.Drawing.Size(295, 172);
             this.txtDescription.TabIndex = 44;
             this.txtDescription.Text = "";
+            // 
+            // txtQuantity
+            // 
+            this.txtQuantity.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
+            this.txtQuantity.Location = new System.Drawing.Point(197, 472);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(295, 23);
+            this.txtQuantity.TabIndex = 46;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(54, 477);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 16);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Cantidad";
             // 
             // ProductAdd
             // 
@@ -195,6 +216,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(786, 518);
+            this.Controls.Add(this.txtQuantity);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddProduct);
@@ -234,5 +257,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox txtDescription;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.Label label1;
     }
 }

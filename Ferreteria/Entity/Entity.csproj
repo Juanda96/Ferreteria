@@ -49,6 +49,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Service.cs" />
+    <Compile Include="Transport.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

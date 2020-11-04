@@ -81,6 +81,7 @@
             this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 12;
             this.label1.Text = "Cedula";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtDNI
             // 
@@ -101,6 +102,7 @@
             this.label2.Size = new System.Drawing.Size(261, 25);
             this.label2.TabIndex = 14;
             this.label2.Text = "Agregar Usuario";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtName
             // 
@@ -121,6 +123,7 @@
             this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 15;
             this.label5.Text = "Nombre";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtLast
             // 
@@ -141,6 +144,7 @@
             this.label6.Size = new System.Drawing.Size(92, 16);
             this.label6.TabIndex = 17;
             this.label6.Text = "Apellido";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -152,6 +156,7 @@
             this.label7.Size = new System.Drawing.Size(49, 16);
             this.label7.TabIndex = 19;
             this.label7.Text = "Tipo";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // cmbType
             // 
@@ -179,6 +184,7 @@
             this.label8.Size = new System.Drawing.Size(75, 16);
             this.label8.TabIndex = 21;
             this.label8.Text = "Codigo";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // lblCodigo
             // 
@@ -190,6 +196,7 @@
             this.lblCodigo.Size = new System.Drawing.Size(83, 16);
             this.lblCodigo.TabIndex = 22;
             this.lblCodigo.Text = "gen cod";
+            this.lblCodigo.Click += new System.EventHandler(this.lblCodigo_Click);
             // 
             // label9
             // 
@@ -201,14 +208,17 @@
             this.label9.Size = new System.Drawing.Size(128, 16);
             this.label9.TabIndex = 23;
             this.label9.Text = "Constraseña";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
             this.txtPass.Location = new System.Drawing.Point(196, 427);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(295, 23);
             this.txtPass.TabIndex = 24;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // btnDelete
             // 

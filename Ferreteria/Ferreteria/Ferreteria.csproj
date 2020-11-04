@@ -46,39 +46,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrations\serviceAdd.cs">
+    <Compile Include="Administration\ProductAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrations\serviceAdd.Designer.cs">
+    <Compile Include="Administration\ProductAdd.Designer.cs">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ProductRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\ProductRead.Designer.cs">
+      <DependentUpon>ProductRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ProductUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\ProductUpdate.Designer.cs">
+      <DependentUpon>ProductUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\serviceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\serviceAdd.Designer.cs">
       <DependentUpon>serviceAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrations\userAdd.cs">
+    <Compile Include="Administration\TransportRead.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrations\userAdd.Designer.cs">
+    <Compile Include="Administration\TransportRead.Designer.cs">
+      <DependentUpon>TransportRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\userAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\userAdd.Designer.cs">
       <DependentUpon>userAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrations\serviceRead.cs">
+    <Compile Include="Administration\serviceRead.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrations\serviceRead.Designer.cs">
+    <Compile Include="Administration\serviceRead.Designer.cs">
       <DependentUpon>serviceRead.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrations\userRead.cs">
+    <Compile Include="Administration\userRead.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrations\userRead.Designer.cs">
+    <Compile Include="Administration\userRead.Designer.cs">
       <DependentUpon>userRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\userUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\userUpdate.Designer.cs">
+      <DependentUpon>userUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="FerreteriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FerreteriaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Administrations\LobbyAdministrador.cs">
+    <Compile Include="Administration\LobbyAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrations\LobbyAdministrador.Designer.cs">
+    <Compile Include="Administration\LobbyAdministrador.Designer.cs">
       <DependentUpon>LobbyAdministrador.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -95,20 +125,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Administrations\LobbyAdministrador.resx">
+    <EmbeddedResource Include="Administration\LobbyAdministrador.resx">
       <DependentUpon>LobbyAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrations\serviceAdd.resx">
+    <EmbeddedResource Include="Administration\ProductAdd.resx">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\ProductRead.resx">
+      <DependentUpon>ProductRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\ProductUpdate.resx">
+      <DependentUpon>ProductUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\serviceAdd.resx">
       <DependentUpon>serviceAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrations\serviceRead.resx">
+    <EmbeddedResource Include="Administration\serviceRead.resx">
       <DependentUpon>serviceRead.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrations\userAdd.resx">
+    <EmbeddedResource Include="Administration\TransportRead.resx">
+      <DependentUpon>TransportRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\userAdd.resx">
       <DependentUpon>userAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrations\userRead.resx">
+    <EmbeddedResource Include="Administration\userRead.resx">
       <DependentUpon>userRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\userUpdate.resx">
+      <DependentUpon>userUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

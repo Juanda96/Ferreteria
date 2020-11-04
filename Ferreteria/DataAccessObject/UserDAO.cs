@@ -39,10 +39,22 @@ namespace DataAccessObject
             return uda.selectUsers();
         }
 
-        public void addUSer(User u) 
+        public void addUser(User u) 
         {
             string value = "'"+u.dni+"','"+u.name+"','"+u.last+"','"+u.code+"','"+u.type+"','"+u.password+"'";
             string SQL = "INSERT INTO UTN.users (dni, name, last, code, type,password) VALUES ("+value+")";
+            uda.audUser(SQL);
+        }
+
+        public void deleteUser(int dni)
+        {
+            string SQL = "DELETE FROM UTN.users WHERE dni = '"+dni+"'";
+            uda.audUser(SQL);
+        }
+
+        public void updateUser(User u, int dni) 
+        {
+            string SQL = "UPDATE UTN.users SET dni = '" + u.dni + "', name = '" + u.name + "', last = '" + u.last + "', code = '" + u.code + "', type = '" + u.type + "',password = '" + u.password +"' WHERE dni = '"+ dni+"'";
             uda.audUser(SQL);
         }
 

@@ -122,6 +122,8 @@ namespace Ferreteria
             lblAdmin.Visible = false;
             lblDate.Visible = false;
             lblTimer.Visible = false;
+            ProductRead pr = new ProductRead();
+            pr.Show();
         }
 
         private void btnService_Click(object sender, EventArgs e)
@@ -138,6 +140,8 @@ namespace Ferreteria
             lblAdmin.Visible = false;
             lblDate.Visible = false;
             lblTimer.Visible = false;
+            TransportRead tr = new TransportRead();
+            tr.Show();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

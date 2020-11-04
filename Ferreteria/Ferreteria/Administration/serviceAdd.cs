@@ -41,6 +41,7 @@ namespace Ferreteria.Administrations
             else
             {
                 sbo.createServ( txtName.Text, txtCateg.Text, txtDescrip.Text, int.Parse(txtPrice.Text));
+                MessageBox.Show("¡Agregado con exito!");
             }
         }
 

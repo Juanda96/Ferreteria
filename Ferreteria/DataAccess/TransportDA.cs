@@ -9,23 +9,23 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class UserDA
+    public class TransportDA
     {
         //DataBase connection
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
 
-        public DataTable selectUsers() 
+        public DataTable selectTransport()
         {
-            SqlCommand command = new SqlCommand("SELECT [id],[dni],[name],[last],[code],[type],[password] FROM[Ferreteria].[UTN].[users]",connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM[Ferreteria].[UTN].[transport]", connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
-            DataTable users = new DataTable();
-            data.Fill(users);
-           
-            return users;
+            DataTable transports = new DataTable();
+            data.Fill(transports);
+
+            return transports;
         }
 
-        public void audUser(string SQL) 
+        public void audTransport(string SQL)
         {
             SqlCommand command = new SqlCommand(SQL, connection);
             try
@@ -40,8 +40,6 @@ namespace DataAccess
 
                 throw;
             }
-
-            
-        } 
+        }
     }
 }

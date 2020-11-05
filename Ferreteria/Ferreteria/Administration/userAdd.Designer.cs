@@ -167,7 +167,8 @@
             "Administrador",
             "Transportista",
             "Vendedor",
-            "Constructor"});
+            "Constructor",
+            "Cliente"});
             this.cmbType.Location = new System.Drawing.Point(196, 287);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(295, 24);

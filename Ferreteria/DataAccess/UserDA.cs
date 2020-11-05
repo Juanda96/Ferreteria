@@ -25,6 +25,17 @@ namespace DataAccess
             return users;
         }
 
+        public DataTable selectClients()
+        {
+            SqlCommand command = new SqlCommand("SELECT [id],[dni],[name],[last],[code] FROM[Ferreteria].[UTN].[users] WHERE type = 'Cliente'", connection);
+            command.CommandType = CommandType.Text;
+            SqlDataAdapter data = new SqlDataAdapter(command);
+            DataTable users = new DataTable();
+            data.Fill(users);
+
+            return users;
+        }
+
         public void audUser(string SQL) 
         {
             SqlCommand command = new SqlCommand(SQL, connection);

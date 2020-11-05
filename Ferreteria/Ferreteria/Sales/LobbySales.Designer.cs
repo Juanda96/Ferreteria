@@ -1,6 +1,6 @@
-﻿namespace Ferreteria
+﻿namespace Ferreteria.Sales
 {
-    partial class LobbyAdministrador
+    partial class LobbySales
     {
         /// <summary>
         /// Required designer variable.
@@ -29,63 +29,46 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblAdmin = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblTimer = new System.Windows.Forms.Label();
-            this.timerWelcome = new System.Windows.Forms.Timer(this.components);
+            this.lblAdmin = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnTransport = new System.Windows.Forms.Button();
             this.btnService = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnWelcome = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label4
+            // lblDate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1318, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "-";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Havelock Titling", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(569, 389);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 19);
+            this.lblDate.TabIndex = 15;
             // 
-            // label3
+            // lblTimer
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1351, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "x";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // lblAdmin
-            // 
-            this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Font = new System.Drawing.Font("Havelock Titling", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.ForeColor = System.Drawing.Color.White;
-            this.lblAdmin.Location = new System.Drawing.Point(568, 282);
-            this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(0, 23);
-            this.lblAdmin.TabIndex = 4;
-            this.lblAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Havelock Titling", 14.25F);
+            this.lblTimer.ForeColor = System.Drawing.Color.White;
+            this.lblTimer.Location = new System.Drawing.Point(681, 332);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(0, 23);
+            this.lblTimer.TabIndex = 14;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnClose);
-            this.panel5.Controls.Add(this.btnTransport);
             this.panel5.Controls.Add(this.btnService);
             this.panel5.Controls.Add(this.btnProduct);
             this.panel5.Controls.Add(this.btnUser);
@@ -94,8 +77,8 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(193, 788);
-            this.panel5.TabIndex = 5;
+            this.panel5.Size = new System.Drawing.Size(193, 749);
+            this.panel5.TabIndex = 12;
             // 
             // label2
             // 
@@ -104,44 +87,53 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
             this.label2.Location = new System.Drawing.Point(46, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 25);
+            this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Admin.";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "VENTAS";
             // 
             // panelButton
             // 
             this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
-            this.panelButton.Location = new System.Drawing.Point(194, 68);
+            this.panelButton.Location = new System.Drawing.Point(195, 68);
             this.panelButton.Name = "panelButton";
             this.panelButton.Size = new System.Drawing.Size(10, 103);
-            this.panelButton.TabIndex = 6;
+            this.panelButton.TabIndex = 13;
             this.panelButton.Visible = false;
-            this.panelButton.Paint += new System.Windows.Forms.PaintEventHandler(this.panelButton_Paint);
             // 
-            // lblDate
+            // lblAdmin
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Havelock Titling", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(568, 389);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(0, 19);
-            this.lblDate.TabIndex = 8;
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.Font = new System.Drawing.Font("Havelock Titling", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.ForeColor = System.Drawing.Color.White;
+            this.lblAdmin.Location = new System.Drawing.Point(569, 282);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(0, 23);
+            this.lblAdmin.TabIndex = 11;
+            this.lblAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblTimer
+            // label4
             // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Havelock Titling", 14.25F);
-            this.lblTimer.ForeColor = System.Drawing.Color.White;
-            this.lblTimer.Location = new System.Drawing.Point(680, 332);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(0, 23);
-            this.lblTimer.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(1302, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 16);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "-";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // timerWelcome
+            // label3
             // 
-            this.timerWelcome.Tick += new System.EventHandler(this.timerWelcome_Tick);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1340, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(18, 16);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "x";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnClose
             // 
@@ -150,7 +142,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = global::Ferreteria.Properties.Resources.log_out;
-            this.btnClose.Location = new System.Drawing.Point(0, 603);
+            this.btnClose.Location = new System.Drawing.Point(3, 496);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(193, 101);
             this.btnClose.TabIndex = 12;
@@ -160,24 +152,6 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             this.btnClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseMove);
-            // 
-            // btnTransport
-            // 
-            this.btnTransport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnTransport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransport.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
-            this.btnTransport.ForeColor = System.Drawing.Color.White;
-            this.btnTransport.Image = global::Ferreteria.Properties.Resources.truck_1_;
-            this.btnTransport.Location = new System.Drawing.Point(0, 496);
-            this.btnTransport.Name = "btnTransport";
-            this.btnTransport.Size = new System.Drawing.Size(193, 101);
-            this.btnTransport.TabIndex = 11;
-            this.btnTransport.Text = "transportes";
-            this.btnTransport.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTransport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTransport.UseVisualStyleBackColor = true;
-            this.btnTransport.Click += new System.EventHandler(this.btnTransport_Click);
-            this.btnTransport.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnTransport_MouseMove);
             // 
             // btnService
             // 
@@ -226,7 +200,7 @@
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(193, 101);
             this.btnUser.TabIndex = 8;
-            this.btnUser.Text = "Usuarios";
+            this.btnUser.Text = "Clientes";
             this.btnUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnUser.UseVisualStyleBackColor = true;
@@ -250,13 +224,17 @@
             this.btnWelcome.UseVisualStyleBackColor = true;
             this.btnWelcome.Click += new System.EventHandler(this.btnWelcome_Click);
             this.btnWelcome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnWelcome_MouseMove);
-            this.btnWelcome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnWelcome_MouseUp);
             // 
-            // LobbyAdministrador
+            // timer1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // LobbySales
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.panel5);
@@ -264,11 +242,12 @@
             this.Controls.Add(this.lblAdmin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LobbyAdministrador";
+            this.Name = "LobbySales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LobbyAdministrador";
-            this.Load += new System.EventHandler(this.LobbyAdministrador_Load);
+            this.Text = "LobbySales";
+            this.Load += new System.EventHandler(this.LobbySales_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -278,20 +257,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnTransport;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnService;
         private System.Windows.Forms.Button btnProduct;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnWelcome;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelButton;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblTimer;
-        private System.Windows.Forms.Timer timerWelcome;
+        private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timer1;
     }
 }

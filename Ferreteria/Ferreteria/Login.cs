@@ -1,5 +1,6 @@
 ﻿using BussinessObject;
 using Entity;
+using Ferreteria.Sales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -167,7 +168,8 @@ namespace Ferreteria
                         }
                         else if (logged.type.Equals("Vendedor"))
                         {
-                            MessageBox.Show("Vendedor");
+                            LobbySales ls = new LobbySales(logged);
+                            ls.Show();
                         }
                         else if (logged.type.Equals("Cajero"))
                         {

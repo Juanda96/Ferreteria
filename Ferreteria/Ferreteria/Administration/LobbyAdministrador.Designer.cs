@@ -52,7 +52,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1301, 9);
+            this.label4.Location = new System.Drawing.Point(1318, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(15, 16);
             this.label4.TabIndex = 3;

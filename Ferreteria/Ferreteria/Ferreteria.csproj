@@ -82,6 +82,12 @@
     <Compile Include="Administration\TransportRead.Designer.cs">
       <DependentUpon>TransportRead.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administration\TransportUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\TransportUpdate.Designer.cs">
+      <DependentUpon>TransportUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administration\userAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\TransportRead.resx">
       <DependentUpon>TransportRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\TransportUpdate.resx">
+      <DependentUpon>TransportUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\userAdd.resx">
       <DependentUpon>userAdd.cs</DependentUpon>

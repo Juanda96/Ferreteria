@@ -41,5 +41,35 @@ namespace Ferreteria.Administration
             TransportAdd ta = new TransportAdd();
             ta.Show();
         }
+
+        private void btnEditProduct_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(dgvTransport.SelectedRows.Count);
+            if (dgvTransport.SelectedRows.Count > -1)
+            {
+                TransportUpdate tu = new TransportUpdate(Convert.ToString(dgvTransport.CurrentRow.Cells[1].Value), Convert.ToInt32(dgvTransport.CurrentRow.Cells[2].Value), Convert.ToInt32(dgvTransport.CurrentRow.Cells[0].Value));
+                tu.Show();
+            }
+            else    
+            {
+                MessageBox.Show("Seleccione un transporte");
+            }
+        }
+
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            if (dgvTransport.SelectedRows.Count < 0)
+            {
+                MessageBox.Show("Seleccione una producto");
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Desea eliminar el vehiculo '" + dgvTransport.CurrentRow.Cells[1].Value + "'", "Eliminar Producto", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    tbo.deleteTransport(Convert.ToInt32(dgvTransport.CurrentRow.Cells[0].Value));
+                }
+            }
+        }
     }
 }

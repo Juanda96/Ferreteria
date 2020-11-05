@@ -70,11 +70,23 @@
     <Compile Include="Administration\serviceAdd.Designer.cs">
       <DependentUpon>serviceAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administration\TransportAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\TransportAdd.Designer.cs">
+      <DependentUpon>TransportAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administration\TransportRead.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administration\TransportRead.Designer.cs">
       <DependentUpon>TransportRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\TransportUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\TransportUpdate.Designer.cs">
+      <DependentUpon>TransportUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Administration\userAdd.cs">
       <SubType>Form</SubType>
@@ -143,8 +155,14 @@
     <EmbeddedResource Include="Administration\serviceRead.resx">
       <DependentUpon>serviceRead.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\TransportAdd.resx">
+      <DependentUpon>TransportAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\TransportRead.resx">
       <DependentUpon>TransportRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\TransportUpdate.resx">
+      <DependentUpon>TransportUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\userAdd.resx">
       <DependentUpon>userAdd.cs</DependentUpon>

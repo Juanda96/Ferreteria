@@ -44,8 +44,12 @@ namespace Ferreteria.Administrations
 
         private void btnEditProduct_Click(object sender, EventArgs e)
         {
-            ProductUpdate pu = new ProductUpdate(pbo.getLinkedProduct(), Convert.ToInt32(dgvProduct.CurrentRow.Cells[0].Value));
-            pu.Show();
+            if (dgvProduct.CurrentRow.Index > -1)
+            {
+                ProductUpdate pu = new ProductUpdate(pbo.getLinkedProduct(), Convert.ToInt32(dgvProduct.CurrentRow.Cells[0].Value));
+                pu.Show();
+            }
+            
         }
 
         private void btnDeleteProduct_Click(object sender, EventArgs e)

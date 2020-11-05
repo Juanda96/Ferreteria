@@ -52,7 +52,7 @@ namespace DataAccessObject
 
         public void updateTransport(Transport t, int id)
         {
-            string SQL = "UPDATE UTN.transport SET iduser = '" + t.idUser + "' WHERE id = '" + id + "'";
+            string SQL = "UPDATE UTN.transport SET idcar = '"+t.carID+"', iduser = '" + t.idUser + "' WHERE id = '" + id + "'";
             tda.audTransport(SQL);
         }
     }

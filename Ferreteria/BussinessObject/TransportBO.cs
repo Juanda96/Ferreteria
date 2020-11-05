@@ -34,7 +34,7 @@ namespace BussinessObject
             tdao.updateTransport(newTransport, oldId);
         }
 
-        public void deleteProduct(int id)
+        public void deleteTransport(int id)
         {
             tdao.deleteTransport(id);
         }

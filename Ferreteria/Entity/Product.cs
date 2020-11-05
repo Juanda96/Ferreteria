@@ -28,6 +28,14 @@ namespace Entity
             _quantity = quantity;
         }
 
+        public Product(int id, string name, int price, int quantity)
+        {
+            _id = id;
+            _name = name;
+            _price = price;
+            _quantity = quantity;
+        }
+
         public Product(string name, string category, string description, int price, int quantity)
         {
             _name = name;

@@ -24,7 +24,7 @@ namespace DataAccessObject
                 {
                     while (reader.Read())
                     {
-                        Product product = new Product(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), int.Parse(reader[4].ToString()), int.Parse(reader[5].ToString()));
+                        Product product = new Product(int.Parse(reader[0].ToString()), reader[1].ToString(), int.Parse(reader[4].ToString()), int.Parse(reader[5].ToString()));
                         products.AddLast(product);
                     }
                 }
@@ -35,6 +35,30 @@ namespace DataAccessObject
         public DataTable getProductDataTable()
         {
             return pda.selectProduct();
+        }
+
+        public LinkedList<Product> getProductLinkSales()
+        {
+            LinkedList<Product> products = new LinkedList<Product>();
+            DataTable dataProduct = pda.selectProductSales();
+            DataTableReader reader = dataProduct.CreateDataReader();
+            do
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Product product = new Product(int.Parse(reader[0].ToString()), reader[1].ToString(), int.Parse(reader[4].ToString()), int.Parse(reader[5].ToString()));
+                        products.AddLast(product);
+                    }
+                }
+            } while (reader.NextResult());
+            return products;
+        }
+
+        public DataTable getProductDataTableSales()
+        {
+            return pda.selectProductSales();
         }
 
         public void addProduct(Product p)

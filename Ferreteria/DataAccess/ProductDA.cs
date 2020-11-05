@@ -25,6 +25,17 @@ namespace DataAccess
             return products;
         }
 
+        public DataTable selectProductSales()
+        {
+            SqlCommand command = new SqlCommand("SELECT [id],[name],[price],[quantity] FROM [Ferreteria].[UTN].[product]", connection);
+            command.CommandType = CommandType.Text;
+            SqlDataAdapter data = new SqlDataAdapter(command);
+            DataTable products = new DataTable();
+            data.Fill(products);
+
+            return products;
+        }
+
         public void audProduct(string SQL)
         {
             SqlCommand command = new SqlCommand(SQL, connection);

@@ -22,6 +22,16 @@ namespace BussinessObject
             return pdao.getProductDataTable();
         }
 
+        public LinkedList<Product> getLinkedProductSales()
+        {
+            return pdao.getProductLinkSales();
+        }
+
+        public DataTable getProductDataTableSales()
+        {
+            return pdao.getProductDataTableSales();
+        }
+
         public void createProduct( string name, string category, string description, int price,int quantity)
         {
             Product newProduct = new Product(name, category, description, price,quantity);

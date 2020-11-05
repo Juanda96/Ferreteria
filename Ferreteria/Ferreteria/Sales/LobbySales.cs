@@ -98,6 +98,8 @@ namespace Ferreteria.Sales
             lblDate.Visible = false;
             lblTimer.Visible = false;
             lblAdmin.Visible = false;
+            SalesAdd sa = new SalesAdd();
+            sa.Show();
         }
 
         private void btnService_Click(object sender, EventArgs e)

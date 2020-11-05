@@ -155,6 +155,12 @@
     <Compile Include="Sales\LobbySales.Designer.cs">
       <DependentUpon>LobbySales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\SalesAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesAdd.Designer.cs">
+      <DependentUpon>SalesAdd.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administration\LobbyAdministrador.resx">
       <DependentUpon>LobbyAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\LobbySales.resx">
       <DependentUpon>LobbySales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesAdd.resx">
+      <DependentUpon>SalesAdd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FerreteriaDataSet.xsc">
       <DependentUpon>FerreteriaDataSet.xsd</DependentUpon>
@@ -283,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart%281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

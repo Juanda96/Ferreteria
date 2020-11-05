@@ -1,31 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class ServiceDA
+    public class TransportDA
     {
         //DataBase connection
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
 
-        public DataTable selectServ()
+        public DataTable selectTransport()
         {
-            SqlCommand command = new SqlCommand("SELECT [id],[name],[cate],[descri],[price] FROM[Ferreteria].[UTN].[serv]", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM[Ferreteria].[UTN].[transport]", connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
-            DataTable service = new DataTable();
-            data.Fill(service);
+            DataTable transports = new DataTable();
+            data.Fill(transports);
 
-            return service;
+            return transports;
         }
 
-        public void audServ(string SQL)
+        public void audTransport(string SQL)
         {
             SqlCommand command = new SqlCommand(SQL, connection);
             try
@@ -40,9 +40,6 @@ namespace DataAccess
 
                 throw;
             }
-
-
         }
-
     }
 }

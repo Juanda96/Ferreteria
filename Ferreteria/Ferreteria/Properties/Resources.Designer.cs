@@ -143,6 +143,16 @@ namespace Ferreteria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shopping_cart_1_ {
+            get {
+                object obj = ResourceManager.GetObject("shopping-cart(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap truck_1_ {
             get {
                 object obj = ResourceManager.GetObject("truck(1)", resourceCulture);

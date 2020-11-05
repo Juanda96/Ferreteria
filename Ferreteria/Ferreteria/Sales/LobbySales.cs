@@ -1,6 +1,4 @@
 ﻿using Entity;
-using Ferreteria.Administration;
-using Ferreteria.Administrations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,21 +9,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ferreteria
+namespace Ferreteria.Sales
 {
-    public partial class LobbyAdministrador : Form
+    public partial class LobbySales : Form
     {
-        User admin;
-        public LobbyAdministrador(User admin)
+        User sales;
+        public LobbySales(User sales)
         {
             InitializeComponent();
-            this.admin = admin;
+            this.sales = sales;
+            lblAdmin.Text = "Bienvenido: " + sales.name +" "+ sales.last;
         }
 
-        private void LobbyAdministrador_Load(object sender, EventArgs e)
+        private void btnWelcome_Click(object sender, EventArgs e)
         {
-            timerWelcome.Start();
-            lblAdmin.Text = "Bienvenido: " + admin.name;
+            lblDate.Visible = true;
+            lblTimer.Visible = true;
+            lblAdmin.Visible = true;
+        }
+
+        private void LobbySales_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTimer.Text = DateTime.Now.ToLongTimeString();
+            lblDate.Text = DateTime.Now.ToLongDateString();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -36,23 +47,6 @@ namespace Ferreteria
         private void label4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnWelcome_MouseUp(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void btnWelcome_Click(object sender, EventArgs e)
-        {
-            lblDate.Visible = true;
-            lblTimer.Visible = true;
-            lblAdmin.Visible = true;
         }
 
         private void btnWelcome_MouseMove(object sender, MouseEventArgs e)
@@ -83,13 +77,6 @@ namespace Ferreteria
             panelButton.Visible = true;
         }
 
-        private void btnTransport_MouseMove(object sender, MouseEventArgs e)
-        {
-            panelButton.Height = btnTransport.Height;
-            panelButton.Top = btnTransport.Top;
-            panelButton.Visible = true;
-        }
-
         private void btnClose_MouseMove(object sender, MouseEventArgs e)
         {
             panelButton.Height = btnClose.Height;
@@ -97,54 +84,37 @@ namespace Ferreteria
             panelButton.Visible = true;
         }
 
-        private void panelButton_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void timerWelcome_Tick(object sender, EventArgs e)
-        {
-            lblTimer.Text = DateTime.Now.ToLongTimeString();
-            lblDate.Text = DateTime.Now.ToLongDateString();
-        }
-
         private void btnUser_Click(object sender, EventArgs e)
         {
             lblDate.Visible = false;
             lblTimer.Visible = false;
             lblAdmin.Visible = false;
-            userRead ru = new userRead();
-            ru.Show();
+            ClientRead cr = new ClientRead();
+            cr.Show();
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            lblAdmin.Visible = false;
             lblDate.Visible = false;
             lblTimer.Visible = false;
+            lblAdmin.Visible = false;
+            SalesAdd sa = new SalesAdd();
+            sa.Show();
         }
 
         private void btnService_Click(object sender, EventArgs e)
         {
-            lblAdmin.Visible = false;
             lblDate.Visible = false;
             lblTimer.Visible = false;
-            serviceRead rs = new serviceRead();
-            rs.Show();
-        }
-
-        private void btnTransport_Click(object sender, EventArgs e)
-        {
             lblAdmin.Visible = false;
-            lblDate.Visible = false;
-            lblTimer.Visible = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            lblAdmin.Visible = false;
             lblDate.Visible = false;
             lblTimer.Visible = false;
+            lblAdmin.Visible = false;
+            this.Close();
         }
     }
 }

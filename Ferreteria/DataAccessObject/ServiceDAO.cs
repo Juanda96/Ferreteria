@@ -43,7 +43,7 @@ namespace DataAccessObject
         {
             string value = "'" +s.name + "','" + s.cate + "','" + s.descri + "','" + s.price + "'";
             string SQL = "INSERT INTO UTN.serv (name, cate, descri, price) VALUES (" + value + ")";
-            sev.addServ(SQL);
+            sev.audServ(SQL);
         }
     }
 }

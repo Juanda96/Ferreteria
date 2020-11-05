@@ -35,5 +35,11 @@ namespace Ferreteria.Administration
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            TransportAdd ta = new TransportAdd();
+            ta.Show();
+        }
     }
 }

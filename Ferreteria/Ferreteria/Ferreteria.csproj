@@ -70,6 +70,12 @@
     <Compile Include="Administration\serviceAdd.Designer.cs">
       <DependentUpon>serviceAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administration\TransportAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\TransportAdd.Designer.cs">
+      <DependentUpon>TransportAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administration\TransportRead.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\serviceRead.resx">
       <DependentUpon>serviceRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\TransportAdd.resx">
+      <DependentUpon>TransportAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\TransportRead.resx">
       <DependentUpon>TransportRead.cs</DependentUpon>

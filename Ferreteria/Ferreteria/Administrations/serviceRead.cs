@@ -45,5 +45,9 @@ namespace Ferreteria.Administration
             serviceAdd sd = new serviceAdd();
             sd.Show();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+        }
     } 
 }

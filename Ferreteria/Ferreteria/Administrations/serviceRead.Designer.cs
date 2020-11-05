@@ -71,6 +71,7 @@
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUser
             // 
@@ -186,7 +187,7 @@
             this.label4.Text = "-";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // readService
+            // serviceRead
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -198,7 +199,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "readService";
+            this.Name = "serviceRead";
             this.Text = "readService";
             this.Load += new System.EventHandler(this.readService_Load);
             this.panel1.ResumeLayout(false);

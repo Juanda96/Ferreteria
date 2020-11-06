@@ -46,6 +46,7 @@ namespace BussinessObject
             return udao.getClientDataTable();
         }
 
+
         public void createUser(int dni,string name,string last,string type,string code,string pass)
         {
             User newUser = new User(dni,name,last,code,type,pass);

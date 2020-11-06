@@ -19,8 +19,8 @@ namespace DataAccessObject
         public LinkedList<Service> getServLink()
         {
             LinkedList<Service> serv = new LinkedList<Service>();
-            DataTable dataUsers = sev.selectServ();
-            DataTableReader reader = dataUsers.CreateDataReader();
+            DataTable dataService = sev.selectServ();
+            DataTableReader reader = dataService.CreateDataReader();
             do
             {
                 if (reader.HasRows)

@@ -14,12 +14,17 @@ namespace Ferreteria.Administration
 {
     public partial class serviceUpdate : Form
     {
-        public serviceUpdate()
+        Service servOld;
+        LinkedList<Service> dataService;
+        int serv;        
+        ServiceBO sbo = new ServiceBO();
+
+        public serviceUpdate(LinkedList<Service> dataService, int selection)
         {
             InitializeComponent();
+            this.dataService = dataService;
+            this.serv = selection;
         }
-        ServiceBO sbo = new ServiceBO();
-        int serv;
 
 
         private void label3_Click(object sender, EventArgs e)
@@ -31,10 +36,13 @@ namespace Ferreteria.Administration
         private void label4_Click(object sender, EventArgs e)
         {
         }
-
+        
         private void btnuUpdate_Click(object sender, EventArgs e)
         {
+            
+
             if (string.IsNullOrEmpty(txtId.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtCate.Text) || string.IsNullOrEmpty(txtDescrip.Text) || string.IsNullOrEmpty(txtPrice.Text))
+
             {
                 MessageBox.Show("Error: información incompleta");
             }
@@ -44,6 +52,7 @@ namespace Ferreteria.Administration
                 MessageBox.Show("¡Actualizado con exito!");
             }
         }
+
     }
     }
 

@@ -84,6 +84,8 @@ namespace Ferreteria.Administrations
         private void btnWelcome_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtDNI.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtLast.Text) || string.IsNullOrEmpty(txtPass.Text))
+               
+            
             {
                 MessageBox.Show("Error: información incompleta");
             }

@@ -19,6 +19,16 @@ namespace Ferreteria.Administrations
         {
             InitializeComponent();
         }
+        public serviceAdd(int id, string name, string cate, string descri, int precio)
+        {
+            InitializeComponent();
+            txtId.Text = id.ToString();
+            txtName.Text = name.ToString();
+            txtCateg.Text = cate.ToString();
+            txtDescrip.Text = descri.ToString();
+            txtPrice.Text = precio.ToString();
+           
+        }
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -34,16 +44,17 @@ namespace Ferreteria.Administrations
 
         private void btnWelcome_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtCateg.Text) || string.IsNullOrEmpty(txtDescrip.Text) || string.IsNullOrEmpty(txtPrice.Text))
+            if (string.IsNullOrEmpty(txtId.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtCateg.Text) || string.IsNullOrEmpty(txtDescrip.Text) || string.IsNullOrEmpty(txtPrice.Text))
             {
                 MessageBox.Show("Error: información incompleta");
             }
             else
             {
-                sbo.createServ( txtName.Text, txtCateg.Text, txtDescrip.Text, int.Parse(txtPrice.Text));
+                sbo.createServ(int.Parse(txtId.Text), txtName.Text, txtCateg.Text, txtDescrip.Text, int.Parse(txtPrice.Text));
                 MessageBox.Show("¡Agregado con exito!");
             }
         }
+    
 
         private void btnDelete_Click(object sender, EventArgs e)
         {

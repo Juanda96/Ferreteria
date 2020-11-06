@@ -61,6 +61,21 @@ namespace Ferreteria.Administration
                 }
             }
         }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            if (dgvService.SelectedRows.Count < 0 && dgvService.CurrentCell.RowIndex != 1)
+            {
+                MessageBox.Show("Seleccione un id");
+            }
+            else
+            {
+                serviceUpdate su = new serviceUpdate(sbo.getLinkedServ(), Convert.ToInt32(dgvService.CurrentRow.Cells[0].Value));
+                su.Show();
+            }
+        }
+
+        
     }
 }
 

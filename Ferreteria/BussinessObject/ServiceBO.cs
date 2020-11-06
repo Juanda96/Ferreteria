@@ -17,10 +17,14 @@ namespace BussinessObject
         {
             return sDao.getServDataTable();
         }
-
-        public void createServ(string name, string cate, string descri, int price)
+        public LinkedList<Service> getLinkedServ()
         {
-            Service newServ = new Service(name, cate, descri, price);
+            return sDao.getServLink();
+        }
+
+        public void createServ(int id,string name, string cate, string descri, int price)
+        {
+            Service newServ = new Service(id,name, cate, descri, price);
             sDao.addServ(newServ);
         }
         public void updateServ(int id,string name, string cate, string descri, int price, int oldid)

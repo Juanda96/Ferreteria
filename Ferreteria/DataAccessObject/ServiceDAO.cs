@@ -45,6 +45,19 @@ namespace DataAccessObject
             string SQL = "INSERT INTO UTN.serv (name, cate, descri, price) VALUES (" + value + ")";
             sev.audServ(SQL);
         }
+
+        public void deleteServ(int id)
+        {
+            string SQL = "DELETE FROM UTN.serv WHERE id = '" + id + "'";
+            sev.audServ(SQL);
+        }
+
+        public void updateServ(Service s, int id)
+        {
+            string SQL = "UPDATE UTN.serv SET id = '" + s.id + "', name = '" + s.name + "', cate = '" + s.cate + "', descri = '" + s.descri +
+                "', price = '" + s.price + "' WHERE id = '" + id + "'";
+            sev.audServ(SQL);
+        }
     }
 }
 

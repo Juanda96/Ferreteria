@@ -12,7 +12,6 @@ namespace BussinessObject
     public class ServiceBO
     {
         ServiceDAO sDao = new ServiceDAO();
-        UserDAO udao = new UserDAO();
 
         public DataTable getServDataTable()
         {
@@ -23,6 +22,16 @@ namespace BussinessObject
         {
             Service newServ = new Service(name, cate, descri, price);
             sDao.addServ(newServ);
+        }
+        public void updateServ(int id,string name, string cate, string descri, int price, int oldid)
+        {
+            Service newServ = new Service(id, name, cate, descri, price);
+            sDao.updateServ(newServ, oldid);
+        }
+
+        public void deleteServ(int id)
+        {
+            sDao.deleteServ(id);
         }
     }
 }

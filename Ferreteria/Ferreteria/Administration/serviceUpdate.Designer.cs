@@ -131,6 +131,7 @@
             this.txtCate.Name = "txtCate";
             this.txtCate.Size = new System.Drawing.Size(295, 22);
             this.txtCate.TabIndex = 49;
+            this.txtCate.TextChanged += new System.EventHandler(this.txtCate_TextChanged);
             // 
             // label6
             // 
@@ -150,6 +151,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(295, 22);
             this.txtName.TabIndex = 47;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label5
             // 
@@ -169,6 +171,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(295, 22);
             this.txtPrice.TabIndex = 57;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // label1
             // 
@@ -188,6 +191,7 @@
             this.txtDescrip.Name = "txtDescrip";
             this.txtDescrip.Size = new System.Drawing.Size(295, 22);
             this.txtDescrip.TabIndex = 58;
+            this.txtDescrip.TextChanged += new System.EventHandler(this.txtDescrip_TextChanged);
             // 
             // txtId
             // 

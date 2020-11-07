@@ -41,7 +41,8 @@ namespace Ferreteria.Administration
         {
             
 
-            if (string.IsNullOrEmpty(txtId.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtCate.Text) || string.IsNullOrEmpty(txtDescrip.Text) || string.IsNullOrEmpty(txtPrice.Text))
+            if (string.IsNullOrEmpty(txtId.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtCate.Text) || 
+                string.IsNullOrEmpty(txtDescrip.Text) || string.IsNullOrEmpty(txtPrice.Text))
 
             {
                 MessageBox.Show("Error: información incompleta");
@@ -53,6 +54,25 @@ namespace Ferreteria.Administration
             }
         }
 
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescrip_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

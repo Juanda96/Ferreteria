@@ -64,7 +64,7 @@ namespace Ferreteria.Administration
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            if (dgvService.SelectedRows.Count < 0 && dgvService.CurrentCell.RowIndex != 1)
+            if (dgvService.SelectedRows.Count < 0 && dgvService.CurrentCell.RowIndex != 0)
             {
                 MessageBox.Show("Seleccione un id");
             }
@@ -75,7 +75,10 @@ namespace Ferreteria.Administration
             }
         }
 
-        
+        private void dgvService_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

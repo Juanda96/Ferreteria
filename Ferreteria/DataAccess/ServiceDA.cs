@@ -16,7 +16,7 @@ namespace DataAccess
 
         public DataTable selectServ()
         {
-            SqlCommand command = new SqlCommand("SELECT [id],[name],[cate],[descri],[price] FROM[Ferreteria].[UTN].[serv]", connection);
+            SqlCommand command = new SqlCommand("SELECT [id],[name],[cate],[descri],[price] FROM[Ferreteria].[UTN].[serv] ", connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
             DataTable serv = new DataTable();

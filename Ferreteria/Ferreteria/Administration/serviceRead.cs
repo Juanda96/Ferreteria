@@ -64,7 +64,7 @@ namespace Ferreteria.Administration
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            if (dgvService.SelectedRows.Count < 0 && dgvService.CurrentCell.RowIndex != 0)
+            if (dgvService.SelectedRows.Count < 0 && dgvService.CurrentCell.RowIndex != 1)
             {
                 MessageBox.Show("Seleccione un id");
             }

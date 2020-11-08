@@ -195,11 +195,13 @@
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtId.Location = new System.Drawing.Point(192, 55);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(53, 22);
             this.txtId.TabIndex = 60;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // label8
             // 
@@ -238,6 +240,7 @@
             this.Name = "serviceUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "serviceUpdate";
+            this.Load += new System.EventHandler(this.serviceUpdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

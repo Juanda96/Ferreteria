@@ -16,7 +16,7 @@ namespace Ferreteria.Administration
     {
         Service servOld;
         LinkedList<Service> dataService;
-        int serv;        
+        int serv;
         ServiceBO sbo = new ServiceBO();
 
         public serviceUpdate(LinkedList<Service> dataService, int selection)
@@ -26,7 +26,21 @@ namespace Ferreteria.Administration
             this.serv = selection;
         }
 
+        private void serviceUpdate_Load(object sender, EventArgs e)
+        {
+            foreach (Service s in dataService)
+            {
+                if (s.id == serv)
+                {
+                    txtId.Text = "" + (s.id);
+                    txtName.Text = s.name;
+                    txtCate.Text = s.cate;
+                    txtDescrip.Text = s.descri;
+                    txtPrice.Text = "" + (s.price);
+                }
 
+            }
+        }
         private void label3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -36,12 +50,12 @@ namespace Ferreteria.Administration
         private void label4_Click(object sender, EventArgs e)
         {
         }
-        
+
         private void btnuUpdate_Click(object sender, EventArgs e)
         {
-            
 
-            if (string.IsNullOrEmpty(txtId.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtCate.Text) || 
+
+            if ( string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtCate.Text) ||
                 string.IsNullOrEmpty(txtDescrip.Text) || string.IsNullOrEmpty(txtPrice.Text))
 
             {
@@ -49,7 +63,7 @@ namespace Ferreteria.Administration
             }
             else
             {
-                sbo.updateServ(int.Parse(txtId.Text), txtName.Text, txtCate.Text, txtDescrip.Text, int.Parse(txtPrice.Text),  serv);
+                sbo.updateServ( txtName.Text, txtCate.Text, txtDescrip.Text, int.Parse(txtPrice.Text), serv);
                 MessageBox.Show("¡Actualizado con exito!");
             }
         }
@@ -73,6 +87,14 @@ namespace Ferreteria.Administration
         {
 
         }
+
+       
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}
+    
 

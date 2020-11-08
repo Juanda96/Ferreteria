@@ -27,9 +27,9 @@ namespace BussinessObject
             Service newServ = new Service(id,name, cate, descri, price);
             sDao.addServ(newServ);
         }
-        public void updateServ(int id,string name, string cate, string descri, int price, int oldid)
+        public void updateServ(string name, string cate, string descri, int price, int oldid)
         {
-            Service newServ = new Service(id, name, cate, descri, price);
+            Service newServ = new Service( name, cate, descri, price);
             sDao.updateServ(newServ, oldid);
         }
 

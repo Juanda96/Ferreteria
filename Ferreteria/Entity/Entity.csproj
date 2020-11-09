@@ -48,6 +48,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Sale.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="Transport.cs" />
     <Compile Include="User.cs" />

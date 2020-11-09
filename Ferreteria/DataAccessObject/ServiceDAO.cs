@@ -55,7 +55,7 @@ namespace DataAccessObject
         public void updateServ(Service s, int id)
         {
             string SQL = "UPDATE UTN.serv SET name = '" + s.name + "', cate = '" + s.cate + "', descri = '" + s.descri +
-                "', price = '" + s.price + "' ";
+                "', price = '" + s.price + "' WHERE id = '" + id + "'";
             sev.audServ(SQL);
         }
     }

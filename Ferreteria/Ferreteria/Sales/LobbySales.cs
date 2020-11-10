@@ -98,7 +98,7 @@ namespace Ferreteria.Sales
             lblDate.Visible = false;
             lblTimer.Visible = false;
             lblAdmin.Visible = false;
-            SalesAdd sa = new SalesAdd();
+            SalesProductAdd sa = new SalesProductAdd();
             sa.Show();
         }
 
@@ -107,6 +107,8 @@ namespace Ferreteria.Sales
             lblDate.Visible = false;
             lblTimer.Visible = false;
             lblAdmin.Visible = false;
+            SalesService ss = new SalesService();
+            ss.Show();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

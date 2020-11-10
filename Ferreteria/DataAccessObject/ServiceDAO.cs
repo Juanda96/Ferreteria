@@ -39,6 +39,12 @@ namespace DataAccessObject
         {
             return sev.selectServ();
         }
+
+        public DataTable getServDataTableSale()
+        {
+            return sev.selectServiceSale();
+        }
+
         public void addServ(Service s)
         {
             string value = "'" +s.name + "','" + s.cate + "','" + s.descri + "','" + s.price + "'";

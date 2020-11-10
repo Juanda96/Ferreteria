@@ -12,7 +12,10 @@ namespace BussinessObject
     public class ServiceBO
     {
         ServiceDAO sDao = new ServiceDAO();
-
+        public DataTable getServDataTableSale()
+        {
+            return sDao.getServDataTableSale();
+        }
         public DataTable getServDataTable()
         {
             return sDao.getServDataTable();

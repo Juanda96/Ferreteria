@@ -118,6 +118,12 @@
     <Compile Include="Administration\userUpdate.Designer.cs">
       <DependentUpon>userUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cashiers\LobbyCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashiers\LobbyCashier.Designer.cs">
+      <DependentUpon>LobbyCashier.cs</DependentUpon>
+    </Compile>
     <Compile Include="FerreteriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -287,7 +293,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Cashiers\" />
     <Folder Include="Clients\" />
     <Folder Include="Contractors\" />
     <Folder Include="Transports\" />

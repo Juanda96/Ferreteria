@@ -1,31 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace DataAccess
 {
-    public class ServiceDA
+    public class SaleDA
     {
-        //DataBase connection
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
-
-        public DataTable selectServ()
-        {
-            SqlCommand command = new SqlCommand("SELECT [id],[name],[cate],[descri],[price] FROM[Ferreteria].[UTN].[serv] ", connection);
-            command.CommandType = CommandType.Text;
-            SqlDataAdapter data = new SqlDataAdapter(command);
-            DataTable serv = new DataTable();
-            data.Fill(serv);
-
-            return serv;
-        }
-
-        public void audServ(string SQL)
+        public void audSale(string SQL)
         {
             SqlCommand command = new SqlCommand(SQL, connection);
             try
@@ -40,9 +26,6 @@ namespace DataAccess
 
                 throw;
             }
-
-
         }
-
     }
 }

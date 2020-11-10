@@ -14,7 +14,7 @@ namespace Ferreteria.Administration
 {
     public partial class serviceRead : Form
     {
-           ServiceBO sbo = new ServiceBO();
+        ServiceBO sbo = new ServiceBO();
 
         public serviceRead()
         {
@@ -48,6 +48,37 @@ namespace Ferreteria.Administration
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (dgvService.SelectedRows.Count < 0 && dgvService.CurrentCell.RowIndex != 1)
+            {
+                MessageBox.Show("Seleccione un id");
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Desea eliminar  '" + dgvService.CurrentRow.Cells[1].Value, "Eliminar servicio", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    sbo.deleteServ(Convert.ToInt32(dgvService.CurrentRow.Cells[0].Value));
+                }
+            }
         }
-    } 
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            if (dgvService.SelectedRows.Count < 0 && dgvService.CurrentCell.RowIndex != 1)
+            {
+                MessageBox.Show("Seleccione un id");
+            }
+            else
+            {
+                serviceUpdate su = new serviceUpdate(sbo.getLinkedServ(), Convert.ToInt32(dgvService.CurrentRow.Cells[0].Value));
+                su.Show();
+            }
+        }
+
+        private void dgvService_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
 }
+

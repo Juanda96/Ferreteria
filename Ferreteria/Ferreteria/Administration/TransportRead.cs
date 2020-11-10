@@ -44,7 +44,6 @@ namespace Ferreteria.Administration
 
         private void btnEditProduct_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(dgvTransport.SelectedRows.Count);
             if (dgvTransport.SelectedRows.Count > -1)
             {
                 TransportUpdate tu = new TransportUpdate(Convert.ToString(dgvTransport.CurrentRow.Cells[1].Value), Convert.ToInt32(dgvTransport.CurrentRow.Cells[2].Value), Convert.ToInt32(dgvTransport.CurrentRow.Cells[0].Value));

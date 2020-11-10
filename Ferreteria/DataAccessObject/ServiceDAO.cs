@@ -19,8 +19,8 @@ namespace DataAccessObject
         public LinkedList<Service> getServLink()
         {
             LinkedList<Service> serv = new LinkedList<Service>();
-            DataTable dataUsers = sev.selectServ();
-            DataTableReader reader = dataUsers.CreateDataReader();
+            DataTable dataService = sev.selectServ();
+            DataTableReader reader = dataService.CreateDataReader();
             do
             {
                 if (reader.HasRows)
@@ -43,6 +43,19 @@ namespace DataAccessObject
         {
             string value = "'" +s.name + "','" + s.cate + "','" + s.descri + "','" + s.price + "'";
             string SQL = "INSERT INTO UTN.serv (name, cate, descri, price) VALUES (" + value + ")";
+            sev.audServ(SQL);
+        }
+
+        public void deleteServ(int id)
+        {
+            string SQL = "DELETE FROM UTN.serv WHERE id = '" + id + "'";
+            sev.audServ(SQL);
+        }
+
+        public void updateServ(Service s, int id)
+        {
+            string SQL = "UPDATE UTN.serv SET name = '" + s.name + "', cate = '" + s.cate + "', descri = '" + s.descri +
+                "', price = '" + s.price + "' WHERE id = '" + id + "'";
             sev.audServ(SQL);
         }
     }

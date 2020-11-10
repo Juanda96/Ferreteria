@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="ProductDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaleDA.cs" />
     <Compile Include="ServiceDA.cs" />
     <Compile Include="TransportDA.cs" />
     <Compile Include="UserDA.cs" />

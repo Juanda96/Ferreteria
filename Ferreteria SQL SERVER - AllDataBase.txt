@@ -59,16 +59,18 @@ CREATE TABLE UTN.transport(
 INSERT INTO UTN.transport(idcar,iduser) VALUES ('ABC123','204900658')
 
 
-CREATE TABLE UTN.sale(
+  CREATE TABLE UTN.sale(
 	id INT IDENTITY(1,1),
 	bill VARCHAR(8) NOT NULL PRIMARY KEY,
 	idUser INT NOT NULL,
 	idProduct INT NOT NULL,
 	quantity INT NOT NULL,
-	date Date NOT NULL,
-	transport BIT NOT NULL,
 	type VARCHAR(20) NOT NULL,
 	status BIT NOT NULL, 
-	FOREIGN KEY (idUser) REFERENCES UTN.users(dni),
-	FOREIGN KEY (idProduct) REFERENCES UTN.product(id)
+	dateSale DATETIME NOT NULL,
+	delivery BIT NOT NULL,
+	FOREIGN KEY (idUser) REFERENCES UTN.users(dni)
 );
+
+INSERT INTO[UTN].[sale]([bill],[idUser],[idProduct],[quantity],[type],[status],[dateSale],[delivery]) 
+	VALUES('HHML3524','201230456','1','5','Product','0','10/11/2020 13:36:47','0')

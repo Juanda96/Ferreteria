@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Ferreteria.Cashiers
 {
     public partial class LobbyCashier : Form
     {
-        public LobbyCashier()
+        User cashier;
+        public LobbyCashier(User cashier)
         {
             InitializeComponent();
+            this.cashier = cashier;
+        }
+
+        private void LobbyCashier_Load(object sender, EventArgs e)
+        {
+            lblAdmin.Text = "Bienvenido: " + cashier.name + " " + cashier.last;
         }
     }
 }

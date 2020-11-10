@@ -12,7 +12,7 @@ namespace DataAccess
     public class UserDA
     {
         //DataBase connection
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionDB"].ConnectionString);
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
 
         public DataTable selectUsers() 
         {

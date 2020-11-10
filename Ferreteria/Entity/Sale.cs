@@ -15,15 +15,13 @@ namespace Entity
         private int _quantity;
         private string _type;
         private int _status;
-
-        public int status
-        {
-            get { return _status; }
-            set { _status = value; }
-        }
+        private DateTime _date;
+        private int _delivery;
 
 
-        public Sale(int id, string bill, int idUser, int idProduct, int quantity, string type,int status)
+
+
+        public Sale(int id, string bill, int idUser, int idProduct, int quantity, string type,int status, DateTime date , int delivery)
         {
             _id = id;
             _bill = bill;
@@ -32,9 +30,11 @@ namespace Entity
             _quantity = quantity;
             _type = type;
             _status = status;
+            _date = date;
+            _delivery = delivery;
         }
 
-        public Sale(string bill, int idUser, int idProduct, int quantity, string type, int status)
+        public Sale(string bill, int idUser, int idProduct, int quantity, string type, int status, int delivery)
         {
             _bill = bill;
             _idUser = idUser;
@@ -42,8 +42,27 @@ namespace Entity
             _quantity = quantity;
             _type = type;
             _status = status;
+            _delivery = delivery;
         }
 
+        public int delivery
+        {
+            get { return _delivery; }
+            set { _delivery = value; }
+        }
+
+        public DateTime date
+        {
+            get { return _date; }
+            set { _date = value; }
+        }
+
+
+        public int status
+        {
+            get { return _status; }
+            set { _status = value; }
+        }
         public string type
         {
             get { return _type; }

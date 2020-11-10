@@ -118,6 +118,24 @@
     <Compile Include="Administration\userUpdate.Designer.cs">
       <DependentUpon>userUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clients\AddOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\AddOrder.Designer.cs">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\LobbyCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\LobbyCliente.Designer.cs">
+      <DependentUpon>LobbyCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\ReadOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\ReadOrder.Designer.cs">
+      <DependentUpon>ReadOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="FerreteriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -206,6 +224,15 @@
     <EmbeddedResource Include="Administration\userUpdate.resx">
       <DependentUpon>userUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Clients\AddOrder.resx">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients\LobbyCliente.resx">
+      <DependentUpon>LobbyCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients\ReadOrder.resx">
+      <DependentUpon>ReadOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,7 +306,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Cashiers\" />
-    <Folder Include="Clients\" />
     <Folder Include="Contractors\" />
     <Folder Include="Transports\" />
     <Folder Include="Warehouses\" />

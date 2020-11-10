@@ -25,17 +25,6 @@ namespace DataAccess
             return serv;
         }
 
-        public DataTable selectServiceSale()
-        {
-            SqlCommand command = new SqlCommand("SELECT [id],[name],[descri],[price] FROM[Ferreteria].[UTN].[serv] ", connection);
-            command.CommandType = CommandType.Text;
-            SqlDataAdapter data = new SqlDataAdapter(command);
-            DataTable serv = new DataTable();
-            data.Fill(serv);
-
-            return serv;
-        }
-
         public void audServ(string SQL)
         {
             SqlCommand command = new SqlCommand(SQL, connection);

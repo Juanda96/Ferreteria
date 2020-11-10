@@ -161,17 +161,11 @@
     <Compile Include="Sales\LobbySales.Designer.cs">
       <DependentUpon>LobbySales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sales\SalesProductAdd.cs">
+    <Compile Include="Sales\SalesAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales\SalesProductAdd.Designer.cs">
-      <DependentUpon>SalesProductAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sales\SalesService.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales\SalesService.Designer.cs">
-      <DependentUpon>SalesService.cs</DependentUpon>
+    <Compile Include="Sales\SalesAdd.Designer.cs">
+      <DependentUpon>SalesAdd.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Administration\LobbyAdministrador.resx">
       <DependentUpon>LobbyAdministrador.cs</DependentUpon>
@@ -229,11 +223,8 @@
     <EmbeddedResource Include="Sales\LobbySales.resx">
       <DependentUpon>LobbySales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sales\SalesProductAdd.resx">
-      <DependentUpon>SalesProductAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sales\SalesService.resx">
-      <DependentUpon>SalesService.cs</DependentUpon>
+    <EmbeddedResource Include="Sales\SalesAdd.resx">
+      <DependentUpon>SalesAdd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FerreteriaDataSet.xsc">
       <DependentUpon>FerreteriaDataSet.xsd</DependentUpon>

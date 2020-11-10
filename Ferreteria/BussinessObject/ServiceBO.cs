@@ -22,6 +22,11 @@ namespace BussinessObject
             return sDao.getServLink();
         }
 
+        public DataTable getServDataTableSale()
+        {
+            return sDao.getServDataTableSale();
+        }
+
         public void createServ(int id,string name, string cate, string descri, int price)
         {
             Service newServ = new Service(id,name, cate, descri, price);

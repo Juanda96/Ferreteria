@@ -35,6 +35,11 @@ namespace DataAccessObject
             return serv;
         }
 
+        public DataTable getServDataTableSale()
+        {
+            return sev.selectServiceSale();
+        }
+
         public DataTable getServDataTable()
         {
             return sev.selectServ();

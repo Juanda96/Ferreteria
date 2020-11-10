@@ -135,7 +135,7 @@
     </Compile>
     <Compile Include="Clients\ReadOrder.Designer.cs">
       <DependentUpon>ReadOrder.cs</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="Cashiers\LobbyCashier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,11 +185,17 @@
     <Compile Include="Sales\LobbySales.Designer.cs">
       <DependentUpon>LobbySales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sales\SalesAdd.cs">
+    <Compile Include="Sales\SalesProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales\SalesAdd.Designer.cs">
-      <DependentUpon>SalesAdd.cs</DependentUpon>
+    <Compile Include="Sales\SalesProduct.Designer.cs">
+      <DependentUpon>SalesProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesService.Designer.cs">
+      <DependentUpon>SalesService.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Administration\LobbyAdministrador.resx">
       <DependentUpon>LobbyAdministrador.cs</DependentUpon>
@@ -230,6 +236,9 @@
     <EmbeddedResource Include="Administration\userUpdate.resx">
       <DependentUpon>userUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cashiers\LobbyCashier.resx">
+      <DependentUpon>LobbyCashier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clients\AddOrder.resx">
       <DependentUpon>AddOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,8 +265,11 @@
     <EmbeddedResource Include="Sales\LobbySales.resx">
       <DependentUpon>LobbySales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sales\SalesAdd.resx">
-      <DependentUpon>SalesAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Sales\SalesProduct.resx">
+      <DependentUpon>SalesProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesService.resx">
+      <DependentUpon>SalesService.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FerreteriaDataSet.xsc">
       <DependentUpon>FerreteriaDataSet.xsd</DependentUpon>
@@ -311,8 +323,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Cashiers\" />
-    <Folder Include="Clients\" />
     <Folder Include="Contractors\" />
     <Folder Include="Transports\" />
     <Folder Include="Warehouses\" />

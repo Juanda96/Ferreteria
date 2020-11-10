@@ -118,6 +118,7 @@
     <Compile Include="Administration\userUpdate.Designer.cs">
       <DependentUpon>userUpdate.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Clients\AddOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +136,13 @@
     </Compile>
     <Compile Include="Clients\ReadOrder.Designer.cs">
       <DependentUpon>ReadOrder.cs</DependentUpon>
+=======
+    <Compile Include="Cashiers\LobbyCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashiers\LobbyCashier.Designer.cs">
+      <DependentUpon>LobbyCashier.cs</DependentUpon>
+>>>>>>> b943c5d43c4027737178baff4fc0f2b8b22ea5eb
     </Compile>
     <Compile Include="FerreteriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -314,7 +322,11 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Folder Include="Cashiers\" />
+=======
+    <Folder Include="Clients\" />
+>>>>>>> b943c5d43c4027737178baff4fc0f2b8b22ea5eb
     <Folder Include="Contractors\" />
     <Folder Include="Transports\" />
     <Folder Include="Warehouses\" />

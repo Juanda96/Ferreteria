@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnWelcome = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -55,18 +55,6 @@
             this.label2.Size = new System.Drawing.Size(171, 25);
             this.label2.TabIndex = 15;
             this.label2.Text = "Agregar Servicio";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(751, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 25);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "x";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -186,6 +174,19 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(751, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 25);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "x";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -205,6 +206,7 @@
             this.label8.Size = new System.Drawing.Size(21, 16);
             this.label8.TabIndex = 61;
             this.label8.Text = "ID";
+
             // 
             // serviceAdd
             // 
@@ -239,7 +241,6 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
@@ -251,6 +252,7 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button btnWelcome;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label8;
     }

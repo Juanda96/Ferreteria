@@ -1,6 +1,7 @@
 ﻿using BussinessObject;
 using Entity;
 using Ferreteria.Sales;
+using Ferreteria.Clients;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -189,7 +190,8 @@ namespace Ferreteria
                         }
                         else if (logged.type.Equals("Cliente"))
                         {
-                            MessageBox.Show("Cliente");
+                            LobbyCliente cliente = new LobbyCliente(logged);
+                            cliente.Show();
                         }
 
                     }

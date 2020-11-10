@@ -42,6 +42,7 @@ namespace Entity
             _category = category;
             _description = description;
             _price = price;
+            _quantity = quantity;
         }
         public int quantity
         {

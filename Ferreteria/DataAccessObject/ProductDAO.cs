@@ -63,8 +63,8 @@ namespace DataAccessObject
 
         public void addProduct(Product p)
         {
-            string value = "'" + p.name + "','" + p.category + "','" + p.description + "','" + p.price + "'" + "','" + p.quantity + "'";
-            string SQL = "INSERT INTO UTN.product (name, category, description, price) VALUES (" + value + ")";
+            string value = "'" + p.name + "','" + p.category + "','" + p.description + "','" + p.price + "','" + p.quantity + "'";
+            string SQL = "INSERT INTO UTN.product (name, category, description, price, quantity) VALUES (" + value + ")";
             pda.audProduct(SQL);
         }
 

@@ -38,5 +38,25 @@ namespace BussinessObject
             Sale sale = new Sale(bill,idUser,idProduct,quantity,type,status,delivery);
             sdao.createSale(sale);
         }
+
+        public DataTable selectSale() 
+        {
+            return sdao.getSaleDataTable();
+        }
+
+        public LinkedList<Sale> selectSaleLink() 
+        {
+            return sdao.getSaleLink();
+        }
+
+        public DataTable selectSalePayment()
+        {
+            return sdao.getSaleDataTable();
+        }
+
+        public LinkedList<Sale> selectSaleLinkPayment()
+        {
+            return sdao.getSaleLink();
+        }
     }
 }

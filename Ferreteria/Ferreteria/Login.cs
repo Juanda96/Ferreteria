@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Ferreteria.Cashiers;
 
 namespace Ferreteria
 {
@@ -174,7 +174,8 @@ namespace Ferreteria
                         }
                         else if (logged.type.Equals("Cajero"))
                         {
-                            MessageBox.Show("Cajero");
+                            LobbyCashier lc = new LobbyCashier(logged);
+                            lc.Show();
                         }
                         else if (logged.type.Equals("Transportista"))
                         {

@@ -118,6 +118,18 @@
     <Compile Include="Administration\userUpdate.Designer.cs">
       <DependentUpon>userUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cashiers\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashiers\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashiers\PayOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashiers\PayOut.Designer.cs">
+      <DependentUpon>PayOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clients\AddOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,12 +170,6 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LobbyCajero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LobbyCajero.Designer.cs">
-      <DependentUpon>LobbyCajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -238,6 +244,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cashiers\LobbyCashier.resx">
       <DependentUpon>LobbyCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashiers\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashiers\PayOut.resx">
+      <DependentUpon>PayOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clients\AddOrder.resx">
       <DependentUpon>AddOrder.cs</DependentUpon>
@@ -347,6 +359,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shopping-cart%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-method.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

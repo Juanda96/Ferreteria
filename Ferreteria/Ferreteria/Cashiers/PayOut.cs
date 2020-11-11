@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ferreteria
+namespace Ferreteria.Cashiers
 {
-    public partial class LobbyCajero : Form
+    public partial class PayOut : Form
     {
-        public LobbyCajero()
+        public PayOut()
         {
             InitializeComponent();
         }

@@ -91,5 +91,21 @@ namespace Ferreteria.Sales
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvBuyData.Rows.RemoveAt(this.dgvBuyData.SelectedRows[0].Index);
+            dgvProduct.DataSource = pbo.getServDataTableSale();
+            foreach (DataGridViewRow product in dgvProduct.Rows)
+            {
+                foreach (DataGridViewRow buy in dgvBuyData.Rows)
+                {
+                    if (product.Cells[0].Value.ToString().Equals(buy.Cells[0].Value.ToString()))
+                    {
+                        dgvProduct.Rows.RemoveAt(product.Index);
+                    }
+                }
+            }
+        }
     }
 }

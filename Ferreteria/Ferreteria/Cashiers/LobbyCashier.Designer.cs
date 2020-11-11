@@ -31,15 +31,15 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnService = new System.Windows.Forms.Button();
-            this.btnProduct = new System.Windows.Forms.Button();
-            this.btnWelcome = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnService = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.btnWelcome = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,70 +75,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(193, 749);
             this.panel5.TabIndex = 19;
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = global::Ferreteria.Properties.Resources.log_out;
-            this.btnClose.Location = new System.Drawing.Point(0, 389);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(193, 101);
-            this.btnClose.TabIndex = 12;
-            this.btnClose.Text = "Cerrar sesión";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // btnService
-            // 
-            this.btnService.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
-            this.btnService.ForeColor = System.Drawing.Color.White;
-            this.btnService.Image = global::Ferreteria.Properties.Resources.consult;
-            this.btnService.Location = new System.Drawing.Point(0, 282);
-            this.btnService.Name = "btnService";
-            this.btnService.Size = new System.Drawing.Size(193, 101);
-            this.btnService.TabIndex = 10;
-            this.btnService.Text = "Servicios";
-            this.btnService.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnService.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnService.UseVisualStyleBackColor = true;
-            // 
-            // btnProduct
-            // 
-            this.btnProduct.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduct.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
-            this.btnProduct.ForeColor = System.Drawing.Color.White;
-            this.btnProduct.Image = global::Ferreteria.Properties.Resources.carpenter;
-            this.btnProduct.Location = new System.Drawing.Point(0, 175);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(193, 101);
-            this.btnProduct.TabIndex = 9;
-            this.btnProduct.Text = "Productos";
-            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnProduct.UseVisualStyleBackColor = true;
-            // 
-            // btnWelcome
-            // 
-            this.btnWelcome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWelcome.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
-            this.btnWelcome.ForeColor = System.Drawing.Color.White;
-            this.btnWelcome.Image = global::Ferreteria.Properties.Resources.home;
-            this.btnWelcome.Location = new System.Drawing.Point(0, 68);
-            this.btnWelcome.Name = "btnWelcome";
-            this.btnWelcome.Size = new System.Drawing.Size(193, 101);
-            this.btnWelcome.TabIndex = 7;
-            this.btnWelcome.Text = "Bienvenido";
-            this.btnWelcome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnWelcome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnWelcome.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -192,6 +128,71 @@
             this.label3.Size = new System.Drawing.Size(18, 16);
             this.label3.TabIndex = 16;
             this.label3.Text = "x";
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = global::Ferreteria.Properties.Resources.log_out;
+            this.btnClose.Location = new System.Drawing.Point(0, 389);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(193, 101);
+            this.btnClose.TabIndex = 12;
+            this.btnClose.Text = "Cerrar sesión";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnService
+            // 
+            this.btnService.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnService.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
+            this.btnService.ForeColor = System.Drawing.Color.White;
+            this.btnService.Image = global::Ferreteria.Properties.Resources.consult;
+            this.btnService.Location = new System.Drawing.Point(0, 282);
+            this.btnService.Name = "btnService";
+            this.btnService.Size = new System.Drawing.Size(193, 101);
+            this.btnService.TabIndex = 10;
+            this.btnService.Text = "Servicios";
+            this.btnService.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnService.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnService.UseVisualStyleBackColor = true;
+            // 
+            // btnProduct
+            // 
+            this.btnProduct.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
+            this.btnProduct.ForeColor = System.Drawing.Color.White;
+            this.btnProduct.Image = global::Ferreteria.Properties.Resources.payment_method;
+            this.btnProduct.Location = new System.Drawing.Point(0, 175);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(193, 101);
+            this.btnProduct.TabIndex = 9;
+            this.btnProduct.Text = "Pagos";
+            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnProduct.UseVisualStyleBackColor = true;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
+            // btnWelcome
+            // 
+            this.btnWelcome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWelcome.Font = new System.Drawing.Font("Havelock Titling", 9.75F);
+            this.btnWelcome.ForeColor = System.Drawing.Color.White;
+            this.btnWelcome.Image = global::Ferreteria.Properties.Resources.home;
+            this.btnWelcome.Location = new System.Drawing.Point(0, 68);
+            this.btnWelcome.Name = "btnWelcome";
+            this.btnWelcome.Size = new System.Drawing.Size(193, 101);
+            this.btnWelcome.TabIndex = 7;
+            this.btnWelcome.Text = "Bienvenido";
+            this.btnWelcome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnWelcome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnWelcome.UseVisualStyleBackColor = true;
             // 
             // LobbyCashier
             // 

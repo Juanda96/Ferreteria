@@ -24,5 +24,11 @@ namespace Ferreteria.Cashiers
         {
             lblAdmin.Text = "Bienvenido: " + cashier.name + " " + cashier.last;
         }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            Payment p = new Payment();
+            p.Show();
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace Ferreteria.Cashiers
         {
             InitializeComponent();
         }
+
+        private void PayOut_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

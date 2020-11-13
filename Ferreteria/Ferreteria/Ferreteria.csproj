@@ -154,6 +154,18 @@
     <Compile Include="Cashiers\LobbyCashier.Designer.cs">
       <DependentUpon>LobbyCashier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clients\SaleProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\SaleProduct.Designer.cs">
+      <DependentUpon>SaleProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\SaleService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\SaleService.Designer.cs">
+      <DependentUpon>SaleService.cs</DependentUpon>
+    </Compile>
     <Compile Include="FerreteriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -259,6 +271,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clients\ReadOrder.resx">
       <DependentUpon>ReadOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients\SaleProduct.resx">
+      <DependentUpon>SaleProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients\SaleService.resx">
+      <DependentUpon>SaleService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

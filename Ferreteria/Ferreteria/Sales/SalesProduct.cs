@@ -55,7 +55,7 @@ namespace Ferreteria.Sales
             {
                 foreach (DataGridViewRow row in dgvProduct.Rows)
                 {
-                    if (row.Selected )
+                    if (row.Selected)
                     {
                         if (Convert.ToInt32(row.Cells[3].Value) > Convert.ToInt32(txtQuantity.Text))
                         {

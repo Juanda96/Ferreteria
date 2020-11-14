@@ -30,5 +30,16 @@ namespace Ferreteria.Cashiers
         {
             this.Close();
         }
+
+        private void btnWelcome_Click(object sender, EventArgs e)
+        {
+            PayOut po = new PayOut();
+            po.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

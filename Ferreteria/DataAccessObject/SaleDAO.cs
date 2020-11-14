@@ -86,7 +86,7 @@ namespace DataAccessObject
 
         public void createSale(Sale sale) 
         {
-            string value = "'" + sale.bill + "','" + sale.idUser + "','" + sale.idProduct + "','" + sale.quantity + "'" + ",'" + sale.type + "','" + sale.status +"','"+DateTime.Now+"','"+sale.delivery+"')";
+            string value = "'" + sale.bill + "','" + sale.idUser + "','" + sale.idProduct + "','" + sale.quantity + "'" + ",'" + sale.type + "','" + sale.status +"','"+  DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") +"','"+sale.delivery+"')";
             if (sale.type.Equals("Product"))
             {
                 value += Environment.NewLine + "  UPDATE UTN.product SET quantity = quantity - '" + sale.quantity + "' WHERE id ="+ sale.idProduct + ";";

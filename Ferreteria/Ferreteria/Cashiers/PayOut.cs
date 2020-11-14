@@ -22,6 +22,7 @@ namespace Ferreteria.Cashiers
 
         private void PayOut_Load(object sender, EventArgs e)
         {
+
             foreach (var compra in sbo.selectSaleClientLink())
             {
                 foreach (var user in ubo.getLinkedClients())
@@ -67,6 +68,7 @@ namespace Ferreteria.Cashiers
 
         private void label4_Click(object sender, EventArgs e)
         {
+
 
         }
     }

@@ -49,7 +49,9 @@ namespace Ferreteria.Clients
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-
+            lblCliente.Visible = true;
+            SaleProduct sa = new SaleProduct();
+            sa.Show();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

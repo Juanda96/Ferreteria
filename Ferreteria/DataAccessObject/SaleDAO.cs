@@ -37,6 +37,29 @@ namespace DataAccessObject
             return sda.selectSale();
         }
 
+        public DataTable getSaleClientDataTable()
+        {
+            return sda.selectSaleClients();
+        }
+
+        public LinkedList<int> getSaleClientLink()
+        {
+            LinkedList<int> sales = new LinkedList<int>();
+            DataTable dataSales = sda.selectSaleClients();
+            DataTableReader reader = dataSales.CreateDataReader();
+            do
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        sales.AddLast(int.Parse(reader[0].ToString()));
+                    }
+                }
+            } while (reader.NextResult());
+            return sales;
+        }
+
         public LinkedList<Sale> getSaleLinkPay()
         {
             LinkedList<Sale> sales = new LinkedList<Sale>();
@@ -70,6 +93,17 @@ namespace DataAccessObject
             }
             string SQL = "INSERT INTO[UTN].[sale]([bill],[idUser],[idProduct],[quantity],[type],[status],[dateSale],[delivery]) VALUES(" + value+"";
             Console.WriteLine(SQL);
+            sda.audSale(SQL);
+        }
+
+        public DataTable getSpecificBuys(int id) 
+        {
+            return sda.selectEspecificSale(id);
+        }
+
+        public void changeStatus(int id) 
+        {
+            string SQL = "UPDATE UTN.sale SET status = 1 WHERE ID = "+ id;
             sda.audSale(SQL);
         }
     }

@@ -49,14 +49,34 @@ namespace BussinessObject
             return sdao.getSaleLink();
         }
 
+
         public DataTable selectSalePayment()
         {
             return sdao.getSaleDataTable();
         }
 
+        public DataTable selectSaleClientPayment()
+        {
+            return sdao.getSaleClientDataTable();
+        }
+        public LinkedList<int> selectSaleClientLink()
+        {
+            return sdao.getSaleClientLink();
+        }
+
         public LinkedList<Sale> selectSaleLinkPayment()
         {
             return sdao.getSaleLink();
+        }
+
+        public DataTable selectSaleEspecificClientBuys(int id)
+        {
+            return sdao.getSpecificBuys(id);
+        }
+
+        public void changeStatus(int id) 
+        {
+            sdao.changeStatus(id);
         }
     }
 }

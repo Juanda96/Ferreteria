@@ -50,7 +50,7 @@ namespace DataAccessObject
                 {
                     while (reader.Read())
                     {
-                        User user = new User(int.Parse(reader[0].ToString()), int.Parse(reader[1].ToString()), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString());
+                        User user = new User(int.Parse(reader[0].ToString()), int.Parse(reader[1].ToString()), reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
                         users.AddLast(user);
                     }
                 }

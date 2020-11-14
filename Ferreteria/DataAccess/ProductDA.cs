@@ -12,17 +12,17 @@ namespace DataAccess
     public class ProductDA
     {
         //DataBase connection
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionDB"].ConnectionString);
 
         public DataTable selectProduct()
         {
             SqlCommand command = new SqlCommand("SELECT * FROM[Ferreteria].[UTN].[product]", connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
-            DataTable products = new DataTable();
-            data.Fill(products);
+            DataTable product = new DataTable();
+            data.Fill(product);
 
-            return products;
+            return product;
         }
 
         public DataTable selectProductSales()
@@ -30,10 +30,10 @@ namespace DataAccess
             SqlCommand command = new SqlCommand("SELECT [id],[name],[price],[quantity] FROM [Ferreteria].[UTN].[product]", connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
-            DataTable products = new DataTable();
-            data.Fill(products);
+            DataTable product = new DataTable();
+            data.Fill(product);
 
-            return products;
+            return product;
         }
 
         public void audProduct(string SQL)

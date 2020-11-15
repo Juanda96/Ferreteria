@@ -355,7 +355,6 @@
   <ItemGroup>
     <Folder Include="Contractors\" />
     <Folder Include="Transports\" />
-    <Folder Include="Warehouses\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\consult.png" />

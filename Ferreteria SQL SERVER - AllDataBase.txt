@@ -74,3 +74,11 @@ INSERT INTO UTN.transport(idcar,iduser) VALUES ('ABC123','204900658')
 
 INSERT INTO[UTN].[sale]([bill],[idUser],[idProduct],[quantity],[type],[status],[dateSale],[delivery]) 
 	VALUES('HHML3524','201230456','1','5','Product','0','10/11/2020 13:36:47','0')
+
+CREATE TABLE UTN.TransportStatus(
+	idcar VARCHAR (6) NOT NULL,
+	status BIT NOT NULL,
+	FOREIGN KEY (idcar) REFERENCES UTN.transport(idcar)
+)
+
+INSERT INTO [UTN].[TransportStatus] ([idcar],[status]) VALUES ('ABC123' ,'0')

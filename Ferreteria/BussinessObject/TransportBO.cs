@@ -38,5 +38,10 @@ namespace BussinessObject
         {
             tdao.deleteTransport(id);
         }
+
+        public void updateStatus(int status, string idCar)
+        {
+            tdao.updateStatus(status, idCar);
+        }
     }
 }

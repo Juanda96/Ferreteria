@@ -57,6 +57,27 @@ namespace DataAccess
             return sales;
         }
 
+        public DataTable clientReadyTransport()
+        {
+            SqlCommand command = new SqlCommand("SELECT UTN.users.dni FROM UTN.users INNER JOIN UTN.sale ON  UTN.users.dni = UTN.sale.idUser WHERE UTN.sale.status = 1 AND UTN.sale.delivery = 0 GROUP BY UTN.users.dni", connection);
+            command.CommandType = CommandType.Text;
+            SqlDataAdapter data = new SqlDataAdapter(command);
+            DataTable sales = new DataTable();
+            data.Fill(sales);
+
+            return sales;
+        }
+
+        public DataTable productReadyTransport(int id)
+        {
+            SqlCommand command = new SqlCommand("SELECT UTN.sale.id, UTN.sale.idProduct, UTN.sale.quantity, UTN.sale.type, UTN.product.price FROM UTN.sale INNER JOIN UTN.product ON UTN.sale.idProduct = UTN.product.id WHERE UTN.sale.delivery = 0 AND UTN.sale.status =1 AND UTN.sale.idUser =" + id, connection);
+            command.CommandType = CommandType.Text;
+            SqlDataAdapter data = new SqlDataAdapter(command);
+            DataTable sales = new DataTable();
+            data.Fill(sales);
+            return sales;
+        }
+
 
         public void audSale(string SQL)
         {
@@ -74,6 +95,8 @@ namespace DataAccess
                 throw;
             }
         }
+
+
 
 
     }

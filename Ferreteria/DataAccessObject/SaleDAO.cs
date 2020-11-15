@@ -96,9 +96,25 @@ namespace DataAccessObject
             sda.audSale(SQL);
         }
 
+
         public DataTable getSpecificBuys(int id) 
         {
             return sda.selectEspecificSale(id);
+        }
+
+        public DataTable clientReadyTransport()
+        {
+            return sda.clientReadyTransport();
+        }
+
+        public DataTable productReadyTransport(int id)
+        {
+            return sda.productReadyTransport(id);
+        }
+        public void changeDelivery(int id)
+        {
+            string SQL = "UPDATE UTN.sale SET delivery = 1 WHERE ID = " + id;
+            sda.audSale(SQL);
         }
 
         public void changeStatus(int id) 

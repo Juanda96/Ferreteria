@@ -78,5 +78,20 @@ namespace BussinessObject
         {
             sdao.changeStatus(id);
         }
+
+        public DataTable clientReadyTransport()
+        {
+            return sdao.clientReadyTransport();
+        }
+
+        public DataTable productReadyTransport(int idUser)
+        {
+            return sdao.productReadyTransport(idUser);
+        }
+
+        public void changeDelivery(int id)
+        {
+            sdao.changeDelivery(id);
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace DataAccess
     public class TransportDA
     {
         //DataBase connection
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionDB"].ConnectionString);
 
         public DataTable selectTransport()
         {
@@ -27,7 +27,7 @@ namespace DataAccess
 
         public DataTable selectTransportStatus()
         {
-            SqlCommand command = new SqlCommand("SELECT idCar FROM[Ferreteria].[UTN].[TransportStatus] WHERE status = 0", connection);
+            SqlCommand command = new SqlCommand("SELECT idCar FROM[Ferreteria].[UTN].[TransportStatus] WHERE status = 1", connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
             DataTable transports = new DataTable();

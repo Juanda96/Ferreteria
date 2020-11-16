@@ -11,7 +11,7 @@ namespace DataAccess
 {
     public class SaleDA
     {
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionDB"].ConnectionString);
 
         public DataTable selectSale()
         {

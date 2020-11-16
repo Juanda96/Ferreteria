@@ -107,6 +107,24 @@ namespace DataAccessObject
             return sda.clientReadyTransport();
         }
 
+        public LinkedList<int> clientReadyTransportLink()
+        {
+            LinkedList<int> sales = new LinkedList<int>();
+            DataTable dataSales = sda.clientReadyTransport();
+            DataTableReader reader = dataSales.CreateDataReader();
+            do
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        sales.AddLast(int.Parse(reader[0].ToString()));
+                    }
+                }
+            } while (reader.NextResult());
+            return sales;
+        }
+
         public DataTable productReadyTransport(int id)
         {
             return sda.productReadyTransport(id);

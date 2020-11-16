@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ferreteria.Cashiers;
+using Ferreteria.Transportist;
 
 namespace Ferreteria
 {
@@ -179,7 +180,8 @@ namespace Ferreteria
                         }
                         else if (logged.type.Equals("Transportista"))
                         {
-                            MessageBox.Show("Transportista");
+                            LobbyTransportist lt = new LobbyTransportist(logged);
+                            lt.Show();
                         }
                         else if (logged.type.Equals("Bodegero"))
                         {

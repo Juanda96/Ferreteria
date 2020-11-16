@@ -37,6 +37,30 @@ namespace DataAccessObject
             return tda.selectTransport();
         }
 
+        public DataTable selectTransportStatus()
+        {
+            return tda.selectTransportStatus();
+        }
+
+        public LinkedList<string> selectTransportStatusLink()
+        {
+            LinkedList<string> transports = new LinkedList<string>();
+            DataTable dataTransport = tda.selectTransportStatus();
+            DataTableReader reader = dataTransport.CreateDataReader();
+            do
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string dats = reader[0].ToString();
+                        transports.AddLast(dats);
+                    }
+                }
+            } while (reader.NextResult());
+            return transports;
+        }
+
         public void addTransport(Transport t)
         {
             string value = "'" + t.carID + "','" + t.idUser + "'";
@@ -58,7 +82,7 @@ namespace DataAccessObject
 
         public void updateStatus(int status, string idCar)
         {
-            string SQL = "UPDATE UTN.transportStatus SET = status = " + status + " WHERE idcar = '" + idCar + "'";
+            string SQL = "UPDATE UTN.transportStatus SET status = " + status + " WHERE idcar = '" + idCar + "'";
             tda.audTransport(SQL);
         }
     }

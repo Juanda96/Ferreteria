@@ -84,6 +84,11 @@ namespace BussinessObject
             return sdao.clientReadyTransport();
         }
 
+        public LinkedList<int> clientReadyTransportLink()
+        {
+            return sdao.clientReadyTransportLink();
+        }
+
         public DataTable productReadyTransport(int idUser)
         {
             return sdao.productReadyTransport(idUser);

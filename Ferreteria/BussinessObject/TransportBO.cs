@@ -43,5 +43,14 @@ namespace BussinessObject
         {
             tdao.updateStatus(status, idCar);
         }
+        public DataTable selectTransportStatus()
+        {
+            return tdao.selectTransportStatus();
+        }
+
+        public LinkedList<string> selectTransportStatusLink()
+        {
+            return tdao.selectTransportStatusLink();
+        }
     }
 }

@@ -215,6 +215,18 @@
     <Compile Include="Sales\SalesService.Designer.cs">
       <DependentUpon>SalesService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transportist\LobbyTransportist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transportist\LobbyTransportist.Designer.cs">
+      <DependentUpon>LobbyTransportist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transportist\PayOutProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transportist\PayOutProducts.Designer.cs">
+      <DependentUpon>PayOutProducts.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administration\LobbyAdministrador.resx">
       <DependentUpon>LobbyAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +313,12 @@
     <EmbeddedResource Include="Sales\SalesService.resx">
       <DependentUpon>SalesService.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transportist\LobbyTransportist.resx">
+      <DependentUpon>LobbyTransportist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transportist\PayOutProducts.resx">
+      <DependentUpon>PayOutProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="FerreteriaDataSet.xsc">
       <DependentUpon>FerreteriaDataSet.xsd</DependentUpon>
     </None>
@@ -354,7 +372,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contractors\" />
-    <Folder Include="Transports\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\consult.png" />

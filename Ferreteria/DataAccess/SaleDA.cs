@@ -11,7 +11,7 @@ namespace DataAccess
 {
     public class SaleDA
     {
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionDB"].ConnectionString);
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
 
         public DataTable selectSale()
         {
@@ -70,7 +70,7 @@ namespace DataAccess
 
         public DataTable productReadyTransport(int id)
         {
-            SqlCommand command = new SqlCommand("SELECT UTN.sale.id, UTN.sale.idProduct, UTN.sale.quantity, UTN.sale.type, UTN.product.price FROM UTN.sale INNER JOIN UTN.product ON UTN.sale.idProduct = UTN.product.id WHERE UTN.sale.delivery = 0 AND UTN.sale.status =1 AND UTN.sale.idUser =" + id, connection);
+            SqlCommand command = new SqlCommand("SELECT UTN.sale.id, UTN.sale.idProduct,UTN.product.name, UTN.sale.quantity, UTN.sale.type, UTN.product.price FROM UTN.sale INNER JOIN UTN.product ON UTN.sale.idProduct = UTN.product.id WHERE UTN.sale.delivery = 0 AND UTN.sale.status =1 AND UTN.sale.idUser =" + id, connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
             DataTable sales = new DataTable();

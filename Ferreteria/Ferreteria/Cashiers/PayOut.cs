@@ -37,7 +37,6 @@ namespace Ferreteria.Cashiers
 
         private void cmbUserBuy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine(int.Parse(cmbUserBuy.Text.Split('-')[1].Trim()));
             dgvPayment.DataSource = sbo.selectSaleEspecificClientBuys(int.Parse(cmbUserBuy.Text.Split('-')[1].Trim()));
             double total = 0;
             foreach (DataGridViewRow row in dgvPayment.Rows)

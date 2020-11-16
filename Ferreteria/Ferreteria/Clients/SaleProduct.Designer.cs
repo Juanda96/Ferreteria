@@ -268,6 +268,7 @@ namespace Ferreteria.Clients
             this.cmbClients.Name = "cmbClients";
             this.cmbClients.Size = new System.Drawing.Size(189, 21);
             this.cmbClients.TabIndex = 53;
+            this.cmbClients.SelectedIndexChanged += new System.EventHandler(this.cmbClients_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -304,7 +305,6 @@ namespace Ferreteria.Clients
             this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //this.Name = "SaleProduct";
             this.Text = "SaleProduct";
             this.Load += new System.EventHandler(this.SaleProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();

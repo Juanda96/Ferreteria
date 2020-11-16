@@ -135,5 +135,10 @@ namespace Ferreteria.Sales
         {
 
         }
+
+        private void dgvBuyData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -66,5 +66,11 @@ namespace Ferreteria.Transportist
         {
 
         }
+
+        private void btnService_Click(object sender, EventArgs e)
+        {
+            Status st = new Status();
+            st.Show();
+        }
     }
 }

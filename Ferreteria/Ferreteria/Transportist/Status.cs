@@ -33,11 +33,12 @@ namespace Ferreteria.Transportist
 
             }
             MessageBox.Show("Vehículo Ocupado");
+
         }
 
         private void Status_Load(object sender, EventArgs e)
         {
-
+             
             foreach (var item in t.selectTransportStatusLink())
             {
                 cmbCamion.Items.Add(item);

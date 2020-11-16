@@ -93,6 +93,11 @@ namespace Ferreteria.Clients
         {
             this.Close();
         }
+
+        private void cmbClients_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

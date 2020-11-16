@@ -78,5 +78,10 @@ namespace Ferreteria.Transportist
             }
             MessageBox.Show("Entrega iniciada");
         }
+
+        private void cmbCamión_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

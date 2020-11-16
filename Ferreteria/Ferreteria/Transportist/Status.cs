@@ -36,6 +36,7 @@ namespace Ferreteria.Transportist
 
         }
 
+
         private void Status_Load(object sender, EventArgs e)
         {
              

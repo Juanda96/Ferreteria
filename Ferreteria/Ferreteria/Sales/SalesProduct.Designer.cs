@@ -192,6 +192,7 @@
             this.dgvBuyData.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvBuyData.Size = new System.Drawing.Size(405, 401);
             this.dgvBuyData.TabIndex = 32;
+            this.dgvBuyData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBuyData_CellContentClick);
             // 
             // Column6
             // 

@@ -74,6 +74,7 @@ namespace Ferreteria.Clients
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.Size = new System.Drawing.Size(396, 314);
             this.dgvProduct.TabIndex = 1;
+            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
             // label2
             // 

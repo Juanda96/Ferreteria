@@ -98,6 +98,11 @@ namespace Ferreteria.Clients
         {
 
         }
+
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }

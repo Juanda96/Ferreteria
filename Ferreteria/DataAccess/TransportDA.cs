@@ -27,7 +27,7 @@ namespace DataAccess
 
         public DataTable selectTransportStatus()
         {
-            SqlCommand command = new SqlCommand("SELECT idCar FROM[Ferreteria].[UTN].[TransportStatus] WHERE status = 1", connection);
+            SqlCommand command = new SqlCommand("SELECT [idCar],[status] FROM[Ferreteria].[UTN].[TransportStatus] WHERE status = 0", connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
             DataTable transports = new DataTable();
@@ -35,7 +35,16 @@ namespace DataAccess
 
             return transports;
         }
+        public DataTable selectTransportStatus1()
+        {
+            SqlCommand command = new SqlCommand("SELECT [idCar],[status] FROM[Ferreteria].[UTN].[TransportStatus] WHERE status = 1", connection);
+            command.CommandType = CommandType.Text;
+            SqlDataAdapter data = new SqlDataAdapter(command);
+            DataTable transports = new DataTable();
+            data.Fill(transports);
 
+            return transports;
+        }
 
         public void audTransport(string SQL)
         {

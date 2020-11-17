@@ -15,6 +15,7 @@ namespace Ferreteria.Transportist
     public partial class Status : Form
     {
         TransportBO t = new TransportBO();
+
         UserBO ub = new UserBO();
         SaleBO sbo = new SaleBO();
         public Status()
@@ -24,23 +25,20 @@ namespace Ferreteria.Transportist
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            foreach (DataGridViewRow row in dgvStatus0.Rows)
-            {                
-                t.updateStatus(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString());
-                t.updateStatus(1, cmbCamion.Text);
-                dgvStatus0.Rows.Add(t);
-
-            }
-            MessageBox.Show("Vehículo Ocupado");
+            t.updateStatus(0, "ABC345");
+            dgvStatus.DataSource = t.selectTransportStatus();
+          
+            MessageBox.Show("Vehículo Disponible");
 
         }
 
 
         private void Status_Load(object sender, EventArgs e)
         {
-             
-            foreach (var item in t.selectTransportStatusLink())
+            dgvStatus.EnableHeadersVisualStyles = false;
+            dgvStatus.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(40, 40, 40);
+            dgvStatus.DataSource = t.selectTransportStatus();
+            foreach (var item in t.selectTransportStatusLink1())
             {
                 cmbCamion.Items.Add(item);
             }

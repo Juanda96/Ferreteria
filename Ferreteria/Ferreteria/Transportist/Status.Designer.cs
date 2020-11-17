@@ -30,15 +30,11 @@ namespace Ferreteria.Transportist
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvStatus0 = new System.Windows.Forms.DataGridView();
+            this.dgvStatus = new System.Windows.Forms.DataGridView();
             this.cmbCamion = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dgvStatus1 = new System.Windows.Forms.DataGridView();
-            this.IdCar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStatus0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStatus1)).BeginInit();
+            this.btnVehiculo = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -52,18 +48,16 @@ namespace Ferreteria.Transportist
             this.label2.TabIndex = 21;
             this.label2.Text = "DISPONIBILIDAD DE  CAMIÓN";
             // 
-            // dgvStatus0
+            // dgvStatus
             // 
-            this.dgvStatus0.AllowUserToAddRows = false;
-            this.dgvStatus0.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.dgvStatus0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStatus0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdCar,
-            this.Estado});
-            this.dgvStatus0.Location = new System.Drawing.Point(133, 111);
-            this.dgvStatus0.Name = "dgvStatus0";
-            this.dgvStatus0.Size = new System.Drawing.Size(244, 297);
-            this.dgvStatus0.TabIndex = 22;
+            this.dgvStatus.AllowUserToAddRows = false;
+            this.dgvStatus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.dgvStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStatus.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.dgvStatus.Location = new System.Drawing.Point(133, 111);
+            this.dgvStatus.Name = "dgvStatus";
+            this.dgvStatus.Size = new System.Drawing.Size(244, 297);
+            this.dgvStatus.TabIndex = 22;
             // 
             // cmbCamion
             // 
@@ -85,54 +79,33 @@ namespace Ferreteria.Transportist
             this.label1.TabIndex = 24;
             this.label1.Text = "Vehículos ocupados";
             // 
-            // button1
+            // btnVehiculo
             // 
-            this.button1.Location = new System.Drawing.Point(477, 343);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dgvStatus1
-            // 
-            this.dgvStatus1.AllowUserToAddRows = false;
-            this.dgvStatus1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.dgvStatus1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStatus1.Location = new System.Drawing.Point(690, 111);
-            this.dgvStatus1.Name = "dgvStatus1";
-            this.dgvStatus1.Size = new System.Drawing.Size(244, 297);
-            this.dgvStatus1.TabIndex = 26;
-            // 
-            // IdCar
-            // 
-            this.IdCar.HeaderText = "IdCar";
-            this.IdCar.Name = "IdCar";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
+            this.btnVehiculo.Location = new System.Drawing.Point(474, 374);
+            this.btnVehiculo.Name = "btnVehiculo";
+            this.btnVehiculo.Size = new System.Drawing.Size(75, 23);
+            this.btnVehiculo.TabIndex = 25;
+            this.btnVehiculo.Text = "Disponible";
+            this.btnVehiculo.UseVisualStyleBackColor = true;
+            this.btnVehiculo.Click += new System.EventHandler(this.button1_Click);
             // 
             // Status
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(1058, 431);
-            this.Controls.Add(this.dgvStatus1);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(685, 431);
+            this.Controls.Add(this.btnVehiculo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbCamion);
-            this.Controls.Add(this.dgvStatus0);
+            this.Controls.Add(this.dgvStatus);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Status";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Status";
             this.Load += new System.EventHandler(this.Status_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStatus0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStatus1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStatus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,12 +114,9 @@ namespace Ferreteria.Transportist
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvStatus0;
+        private System.Windows.Forms.DataGridView dgvStatus;
         private System.Windows.Forms.ComboBox cmbCamion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dgvStatus1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdCar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Button btnVehiculo;
     }
 }

@@ -42,6 +42,11 @@ namespace DataAccessObject
             return tda.selectTransportStatus();
         }
 
+        public DataTable selectTransportStatus1()
+        {
+            return tda.selectTransportStatus1();
+        }
+
         public LinkedList<string> selectTransportStatusLink()
         {
             LinkedList<string> transports = new LinkedList<string>();
@@ -54,6 +59,26 @@ namespace DataAccessObject
                     while (reader.Read())
                     {
                         string dats = reader[0].ToString();
+                        transports.AddLast(dats);
+                    }
+                }
+            } while (reader.NextResult());
+            return transports;
+        }
+
+        public LinkedList<string> selectTransportStatusLink1()
+        {
+            LinkedList<string> transports = new LinkedList<string>();
+            DataTable dataTransport = tda.selectTransportStatus1();
+            DataTableReader reader = dataTransport.CreateDataReader();
+            do
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string dats = reader[0].ToString();
+                        string dato = reader[1].ToString();
                         transports.AddLast(dats);
                     }
                 }

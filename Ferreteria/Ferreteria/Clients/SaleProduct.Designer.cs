@@ -50,6 +50,8 @@ namespace Ferreteria.Clients
             this.dgvBuy = new System.Windows.Forms.DataGridView();
             this.cmbClients = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuy)).BeginInit();
             this.SuspendLayout();
@@ -282,12 +284,38 @@ namespace Ferreteria.Clients
             this.label4.TabIndex = 52;
             this.label4.Text = "Cliente comprador:";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(1000, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(19, 25);
+            this.label7.TabIndex = 55;
+            this.label7.Text = "-";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(1035, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(23, 25);
+            this.label9.TabIndex = 54;
+            this.label9.Text = "x";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // SaleProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1070, 510);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.cmbClients);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -306,6 +334,7 @@ namespace Ferreteria.Clients
             this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "SaleProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SaleProduct";
             this.Load += new System.EventHandler(this.SaleProduct_Load);
@@ -339,5 +368,7 @@ namespace Ferreteria.Clients
         private System.Windows.Forms.DataGridView dgvBuy;
         private System.Windows.Forms.ComboBox cmbClients;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
     }
 }

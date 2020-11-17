@@ -102,6 +102,9 @@ namespace BussinessObject
             return sdao.productReadyTransport(idUser);
         }
 
+        /*
+         * method to change delivery by id
+        */
         public void changeDelivery(int id)
         {
             sdao.changeDelivery(id);

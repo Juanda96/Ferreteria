@@ -305,6 +305,7 @@ namespace Ferreteria.Clients
             this.label4.Size = new System.Drawing.Size(19, 25);
             this.label4.TabIndex = 45;
             this.label4.Text = "-";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -316,6 +317,7 @@ namespace Ferreteria.Clients
             this.label3.Size = new System.Drawing.Size(23, 25);
             this.label3.TabIndex = 44;
             this.label3.Text = "x";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblTotal
             // 

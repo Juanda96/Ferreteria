@@ -124,9 +124,7 @@ namespace Ferreteria
             loginComprobation(e);
         }
 
-        /*
-         * Method to log in with an ID and password
-         */
+       
         private bool initSesion(KeyEventArgs e) 
         {
             bool init = false;
@@ -156,9 +154,7 @@ namespace Ferreteria
 
         }
 
-        /*
-         * Method to identify users who have registered and give them access to the windows that correspond to them
-         */
+       
         private void loginComprobation(KeyEventArgs e) {
             if (e.KeyCode == Keys.Enter)
             {

@@ -48,9 +48,18 @@ namespace BussinessObject
             return tdao.selectTransportStatus();
         }
 
+        public DataTable selectTransportStatus1()
+        {
+            return tdao.selectTransportStatus1();
+        }
+
         public LinkedList<string> selectTransportStatusLink()
         {
             return tdao.selectTransportStatusLink();
+        }
+        public LinkedList<string> selectTransportStatusLink1()
+        {
+            return tdao.selectTransportStatusLink1();
         }
     }
 }

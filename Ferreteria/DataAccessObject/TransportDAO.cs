@@ -88,7 +88,7 @@ namespace DataAccessObject
 
 
         /*
-         * Agregar un nuevo transporte con la base de datos
+         * Add a new transport with the database
          */
         public void addTransport(Transport t)
         {
@@ -98,7 +98,7 @@ namespace DataAccessObject
         }
 
         /*
-       * Eliminar un transporte ya registrado con la base de datos
+       * Delete a transport already registered with the database
        */
         public void deleteTransport(int id)
         {
@@ -106,8 +106,8 @@ namespace DataAccessObject
             tda.audTransport(SQL);
         }
 
-        /*
-      * Actualizar un transporte por id con la base de datos
+      /*
+      *Update a transport by id with the database
       */
         public void updateTransport(Transport t, int id)
         {
@@ -116,7 +116,7 @@ namespace DataAccessObject
         }
 
         /*
-      * Actualizar un estado del envío con sql
+      * Update a shipment status with sql
       */
         public void updateStatus(int status, string idCar)
         {

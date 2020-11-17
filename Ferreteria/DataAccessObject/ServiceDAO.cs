@@ -48,7 +48,7 @@ namespace DataAccessObject
         }
 
         /*
-         * Agregar un nuevo servicio con la base de datos
+         * Add a new service with the database
          */
         public void addServ(Service s)
         {
@@ -58,7 +58,7 @@ namespace DataAccessObject
         }
 
         /*
-        * Eliminar un  servicio ya registrado con la base de datos
+        * Delete a service already registered with the database
         */
         public void deleteServ(int id)
         {
@@ -67,7 +67,7 @@ namespace DataAccessObject
         }
 
         /*
-       * Actualizar un  servicio por id con la base de datos
+       * Update a service by id with the database
        */
         public void updateServ(Service s, int id)
         {

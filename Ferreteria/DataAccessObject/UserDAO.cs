@@ -65,7 +65,7 @@ namespace DataAccessObject
 
 
         /*
-         * Agregar un nuevo usuario con la base de datos
+         * Add a new user with the database
          */
         public void addUser(User u) 
         {
@@ -75,7 +75,7 @@ namespace DataAccessObject
         }
 
         /*
-      * Eliminar un usuario ya registrado con la base de datos por cédula
+      * Delete a user already registered with the database by ID
       */
         public void deleteUser(int dni)
         {
@@ -85,7 +85,7 @@ namespace DataAccessObject
 
 
         /*
-      * Actualizar un usuario por dni con la base de datos
+      * Update a user by ID with the database
       */
         public void updateUser(User u, int dni) 
         {

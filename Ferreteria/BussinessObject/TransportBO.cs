@@ -22,7 +22,8 @@ namespace BussinessObject
             return tdao.getTransportDataTable();
         }
 
-        /*Permite realizar un nuevo envió con el servicio o producto creado
+        /*
+         * It allows to make a new shipment with the service or product created
          */
         public void createTransport(string idcar, int iduser)
         {
@@ -30,7 +31,8 @@ namespace BussinessObject
             tdao.addTransport(newTransport);
         }
 
-        /* Método para actualizar transporte
+        /* 
+         * Method to update transportation
          */
         public void updateTransport(string idcar, int iduser, int oldId)
         {
@@ -38,9 +40,8 @@ namespace BussinessObject
             tdao.updateTransport(newTransport, oldId);
         }
 
-        /*Eliminar un transporte por id
-         * 
-         * 
+        /* 
+         *Delete a transport by id 
          */
         public void deleteTransport(int id)
         {
@@ -49,9 +50,8 @@ namespace BussinessObject
 
 
 
-        /*Actualizar el estado del transporte, si se encuentran camiones disponibles o
-         * realizando entregas
-         * 
+        /*
+         * Update the transport status, if trucks are available or making deliveries
          */
         public void updateStatus(int status, string idCar)
         {

@@ -36,7 +36,8 @@ namespace BussinessObject
 
 
 
-        /*Permite genrar una nueva venta con los parámetros necesario.
+        /*
+         * It allows to generate a new sale with the necessary parameters.
          */
         public void createSale(string bill, int idUser, int idProduct, int quantity, string type, int status, int delivery) 
         {

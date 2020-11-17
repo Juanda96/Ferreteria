@@ -84,9 +84,9 @@ namespace DataAccessObject
             return sda.selectSalePayment();
         }
 
-       /*
-        * Crear una nueva venta con la base de datos
-        */
+        /*
+         * Create a new sale with the database
+         */
         public void createSale(Sale sale) 
         {
             string value = "'" + sale.bill + "','" + sale.idUser + "','" + sale.idProduct + "','" + sale.quantity + "'" + ",'" + sale.type + "','" + sale.status +"','"+  DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") +"','"+sale.delivery+"')";
@@ -134,7 +134,7 @@ namespace DataAccessObject
         }
 
         /*
-         * Cambiar la entrega por id con sql
+         *Change delivery by id with sql
          */
 
         public void changeDelivery(int id)
@@ -144,7 +144,7 @@ namespace DataAccessObject
         }
 
         /*
-         * Cambiar el estado por id con sql
+         * Change state by id with sql
          */
         public void changeStatus(int id) 
         {

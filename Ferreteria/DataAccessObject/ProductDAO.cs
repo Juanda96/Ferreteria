@@ -62,7 +62,7 @@ namespace DataAccessObject
         }
 
         /*
-         * Agregar un nuevo producto con la base de datos
+         * Add a new product with the database
          */
         public void addProduct(Product p)
         {
@@ -72,7 +72,7 @@ namespace DataAccessObject
         }
 
         /*
-        * Eliminar un producto por id con la base de datos
+        * Delete a product by id with the database
         */
         public void deleteProduct(int id)
         {
@@ -81,7 +81,7 @@ namespace DataAccessObject
         }
 
         /*
-        * Actualizar un producto con la base de datos
+        * Update a product with the database
         */
         public void updateProduct(Product p, int id)
         {

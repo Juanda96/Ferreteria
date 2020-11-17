@@ -46,10 +46,6 @@ namespace DataAccessObject
         {
             return sev.selectServ();
         }
-
-        /*
-         * Add a new service with the database
-         */
         public void addServ(Service s)
         {
             string value = "'" +s.name + "','" + s.cate + "','" + s.descri + "','" + s.price + "'";
@@ -57,18 +53,14 @@ namespace DataAccessObject
             sev.audServ(SQL);
         }
 
-        /*
-        * Delete a service already registered with the database
-        */
+        
         public void deleteServ(int id)
         {
             string SQL = "DELETE FROM UTN.serv WHERE id = '" + id + "'";
             sev.audServ(SQL);
         }
 
-        /*
-       * Update a service by id with the database
-       */
+        
         public void updateServ(Service s, int id)
         {
             string SQL = "UPDATE UTN.serv SET name = '" + s.name + "', cate = '" + s.cate + "', descri = '" + s.descri +

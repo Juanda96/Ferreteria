@@ -103,6 +103,17 @@ namespace Ferreteria.Clients
         {
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
     }
 
 }

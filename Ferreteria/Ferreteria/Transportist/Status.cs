@@ -51,6 +51,18 @@ namespace Ferreteria.Transportist
 
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
     }
 }
 

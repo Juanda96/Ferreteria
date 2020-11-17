@@ -64,9 +64,6 @@ namespace DataAccessObject
         }
 
 
-        /*
-         * Add a new user with the database
-         */
         public void addUser(User u) 
         {
             string value = "'"+u.dni+"','"+u.name+"','"+u.last+"','"+u.code+"','"+u.type+"','"+u.password+"'";
@@ -74,9 +71,7 @@ namespace DataAccessObject
             uda.audUser(SQL);
         }
 
-        /*
-      * Delete a user already registered with the database by ID
-      */
+        
         public void deleteUser(int dni)
         {
             string SQL = "DELETE FROM UTN.users WHERE dni = '"+dni+"'";
@@ -84,9 +79,6 @@ namespace DataAccessObject
         }
 
 
-        /*
-      * Update a user by ID with the database
-      */
         public void updateUser(User u, int dni) 
         {
             string SQL = "UPDATE UTN.users SET dni = '" + u.dni + "', name = '" + u.name + "', last = '" + u.last + "', code = '" + u.code + "', type = '" + u.type + "',password = '" + u.password +"' WHERE dni = '"+ dni+"'";

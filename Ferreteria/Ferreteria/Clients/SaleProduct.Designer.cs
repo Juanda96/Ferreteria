@@ -306,6 +306,7 @@ namespace Ferreteria.Clients
             this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SaleProduct";
             this.Load += new System.EventHandler(this.SaleProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();

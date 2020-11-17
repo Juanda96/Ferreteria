@@ -85,7 +85,7 @@ namespace Ferreteria.Clients
 
         private void btnService_Click(object sender, EventArgs e)
         {
-            ReadOrder ad = new ReadOrder();
+            SaleService ad = new SaleService();
             ad.Show();
         }
     }

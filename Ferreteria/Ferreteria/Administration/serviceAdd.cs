@@ -61,6 +61,11 @@ namespace Ferreteria.Administrations
             this.Close();
 
         }
+
+        private void serviceAdd_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

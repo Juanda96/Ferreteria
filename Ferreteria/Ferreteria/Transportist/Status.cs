@@ -43,16 +43,6 @@ namespace Ferreteria.Transportist
                 cmbCamion.Items.Add(item);
             }
 
-            //    foreach (var compra in t.selectTransportStatusLink())
-            //    {
-            //        foreach (var user in ub.getLinkedClients())
-            //        {
-            //            if (compra == user.dni)
-            //            {
-            //                cmbCamion.Items.Add(user.name + " - " + user.dni);
-            //            }
-            //        }
-            //    }
 
         }
 

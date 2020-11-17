@@ -86,6 +86,10 @@ namespace DataAccessObject
             return transports;
         }
 
+
+        /*
+         * Add a new transport with the database
+         */
         public void addTransport(Transport t)
         {
             string value = "'" + t.carID + "','" + t.idUser + "'";
@@ -93,18 +97,27 @@ namespace DataAccessObject
            tda.audTransport(SQL);
         }
 
+        /*
+       * Delete a transport already registered with the database
+       */
         public void deleteTransport(int id)
         {
             string SQL = "DELETE FROM UTN.transport WHERE id = '" + id + "'";
             tda.audTransport(SQL);
         }
 
+      /*
+      *Update a transport by id with the database
+      */
         public void updateTransport(Transport t, int id)
         {
             string SQL = "UPDATE UTN.transport SET idcar = '"+t.carID+"', iduser = '" + t.idUser + "' WHERE id = '" + id + "'";
             tda.audTransport(SQL);
         }
 
+        /*
+      * Update a shipment status with sql
+      */
         public void updateStatus(int status, string idCar)
         {
             string SQL = "UPDATE UTN.transportStatus SET status = " + status + " WHERE idcar = '" + idCar + "'";

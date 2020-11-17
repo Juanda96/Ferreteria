@@ -13,6 +13,7 @@ namespace BussinessObject
     {
         SaleDAO sdao = new SaleDAO();
 
+
         public string generateCode()
         {
             int length = 4;
@@ -33,11 +34,18 @@ namespace BussinessObject
             return str_build.ToString()+_random.Next(1000, 9999);
         }
 
+
+
+        /*
+         * It allows to generate a new sale with the necessary parameters.
+         */
         public void createSale(string bill, int idUser, int idProduct, int quantity, string type, int status, int delivery) 
         {
             Sale sale = new Sale(bill,idUser,idProduct,quantity,type,status,delivery);
             sdao.createSale(sale);
         }
+
+
 
         public DataTable selectSale() 
         {

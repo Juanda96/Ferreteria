@@ -84,6 +84,9 @@ namespace DataAccessObject
             return sda.selectSalePayment();
         }
 
+        /*
+         * Create a new sale with the database
+         */
         public void createSale(Sale sale) 
         {
             string value = "'" + sale.bill + "','" + sale.idUser + "','" + sale.idProduct + "','" + sale.quantity + "'" + ",'" + sale.type + "','" + sale.status +"','"+  DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") +"','"+sale.delivery+"')";
@@ -129,12 +132,20 @@ namespace DataAccessObject
         {
             return sda.productReadyTransport(id);
         }
+
+        /*
+         *Change delivery by id with sql
+         */
+
         public void changeDelivery(int id)
         {
             string SQL = "UPDATE UTN.sale SET delivery = 1 WHERE ID = " + id;
             sda.audSale(SQL);
         }
 
+        /*
+         * Change state by id with sql
+         */
         public void changeStatus(int id) 
         {
             string SQL = "UPDATE UTN.sale SET status = 1 WHERE ID = "+ id;

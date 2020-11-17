@@ -174,7 +174,6 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-
             // label3
             // 
             this.label3.AutoSize = true;
@@ -186,7 +185,7 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "x";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-
+            // 
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -206,7 +205,6 @@
             this.label8.Size = new System.Drawing.Size(21, 16);
             this.label8.TabIndex = 61;
             this.label8.Text = "ID";
-
             // 
             // serviceAdd
             // 
@@ -233,6 +231,7 @@
             this.Name = "serviceAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ServiceAdd";
+            this.Load += new System.EventHandler(this.serviceAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

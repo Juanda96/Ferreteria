@@ -47,18 +47,30 @@ namespace BussinessObject
         }
 
 
+
+        /*Crear un usuario nuevo con los parámetros agregados
+         * 
+         * 
+         */
         public void createUser(int dni,string name,string last,string type,string code,string pass)
         {
             User newUser = new User(dni,name,last,code,type,pass);
             udao.addUser(newUser);
         }
 
+        /*Actualizar un usuario ya registrado
+         * 
+         * 
+         */
         public void updateUser(int dni, string name, string last, string type, string code, string pass, int oldDni) 
         {
             User newUser = new User(dni, name, last, code, type, pass);
             udao.updateUser(newUser,oldDni);
         }
 
+        /*
+         * Eliminar un usuario por cédula
+         */
         public void deleteUser(int dni)
         {
             udao.deleteUser(dni);

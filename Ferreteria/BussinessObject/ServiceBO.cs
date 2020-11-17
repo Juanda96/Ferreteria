@@ -27,17 +27,25 @@ namespace BussinessObject
             return sDao.getServDataTableSale();
         }
 
+        /*Permite crear o solicitar un nuevo servicio 
+         */
         public void createServ(int id,string name, string cate, string descri, int price)
         {
             Service newServ = new Service(id,name, cate, descri, price);
             sDao.addServ(newServ);
         }
+
+        /*Permite modificar un servicio ya previamente registrado
+         */
         public void updateServ(string name, string cate, string descri, int price, int oldid)
         {
             Service newServ = new Service( name, cate, descri, price);
             sDao.updateServ(newServ, oldid);
         }
 
+        /*
+         * Método para eliminar un servicio por id
+         */
         public void deleteServ(int id)
         {
             sDao.deleteServ(id);

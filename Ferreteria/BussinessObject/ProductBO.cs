@@ -32,11 +32,17 @@ namespace BussinessObject
             return pdao.getProductDataTableSales();
         }
 
+        /*Permite crear un nuevo producto con los atributos necesario.
+         */
+
         public void createProduct( string name, string category, string description, int price,int quantity)
         {
             Product newProduct = new Product(name, category, description, price,quantity);
             pdao.addProduct(newProduct);
         }
+
+        /*Método para actualizar un producto ya registrado o cerado
+         */
 
         public void updateProduct(string name, string category, string description, int price,int quantity, int oldId)
         {
@@ -44,6 +50,9 @@ namespace BussinessObject
             pdao.updateProduct(newProduct, oldId);
         }
 
+        /*
+         * Método para eliminar el producto seleccionado por id
+         */
         public void deleteProduct(int id)
         {
             pdao.deleteProduct(id);

@@ -61,6 +61,9 @@ namespace DataAccessObject
             return pda.selectProductSales();
         }
 
+        /*
+         * Agregar un nuevo producto con la base de datos
+         */
         public void addProduct(Product p)
         {
             string value = "'" + p.name + "','" + p.category + "','" + p.description + "','" + p.price + "','" + p.quantity + "'";
@@ -68,12 +71,18 @@ namespace DataAccessObject
             pda.audProduct(SQL);
         }
 
+        /*
+        * Eliminar un producto por id con la base de datos
+        */
         public void deleteProduct(int id)
         {
             string SQL = "DELETE FROM UTN.product WHERE id = '" + id + "'";
             pda.audProduct(SQL);
         }
 
+        /*
+        * Actualizar un producto con la base de datos
+        */
         public void updateProduct(Product p, int id)
         {
             string SQL = "UPDATE UTN.product SET name = '" + p.name + "', category = '" + p.category + "', description = '" + p.description + "', price = '" + p.price + "'"+ "','" + p.quantity + "' WHERE id = '" + id + "'";

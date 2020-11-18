@@ -45,7 +45,15 @@ namespace BussinessObject
             sdao.createSale(sale);
         }
 
+        public LinkedList<string> selectSalesReportCatProduct()
+        {
+            return sdao.selectSalesReportCatProduct();
+        }
 
+        public LinkedList<string> selectSalesReportCatService()
+        {
+            return sdao.selectSalesReportCatService();
+        }
 
         public DataTable selectSale() 
         {
@@ -63,7 +71,12 @@ namespace BussinessObject
             return sdao.getSaleDataTable();
         }
 
-        public DataTable selectSaleClientPayment()
+        public LinkedList<Sale> selectSalesReport()
+        {
+            return sdao.selectSalesReport();
+        }
+
+            public DataTable selectSaleClientPayment()
         {
             return sdao.getSaleClientDataTable();
         }

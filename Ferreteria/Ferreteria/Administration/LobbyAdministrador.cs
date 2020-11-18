@@ -150,5 +150,11 @@ namespace Ferreteria
             lblDate.Visible = false;
             lblTimer.Visible = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reports re = new Reports();
+            re.Show();
+        }
     }
 }

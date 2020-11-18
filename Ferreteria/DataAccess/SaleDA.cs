@@ -11,7 +11,7 @@ namespace DataAccess
 {
     public class SaleDA
     {
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionDB"].ConnectionString);
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionJuan"].ConnectionString);
 
         public DataTable selectSale()
         {
@@ -27,6 +27,39 @@ namespace DataAccess
         public DataTable selectSalePayment()
         {
             SqlCommand command = new SqlCommand("SELECT * FROM[Ferreteria].[UTN].[sale] WHERE status = 0", connection);
+            command.CommandType = CommandType.Text;
+            SqlDataAdapter data = new SqlDataAdapter(command);
+            DataTable sales = new DataTable();
+            data.Fill(sales);
+
+            return sales;
+        }
+
+        public DataTable selectSalesReport()
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM[Ferreteria].[UTN].[sale] WHERE status = 1", connection);
+            command.CommandType = CommandType.Text;
+            SqlDataAdapter data = new SqlDataAdapter(command);
+            DataTable sales = new DataTable();
+            data.Fill(sales);
+
+            return sales;
+        }
+
+        public DataTable selectSalesReportCatProduct()
+        {
+            SqlCommand command = new SqlCommand("SELECT UTN.sale.idProduct, UTN.product.category FROM UTN.sale INNER JOIN UTN.product ON UTN.sale.idProduct = UTN.product.id WHERE utn.sale.status = 1 AND utn.sale.type = 'Product'", connection);
+            command.CommandType = CommandType.Text;
+            SqlDataAdapter data = new SqlDataAdapter(command);
+            DataTable sales = new DataTable();
+            data.Fill(sales);
+
+            return sales;
+        }
+
+        public DataTable selectSalesReportCatService()
+        {
+            SqlCommand command = new SqlCommand("SELECT UTN.sale.idProduct, UTN.serv.cate FROM UTN.serv INNER JOIN UTN.sale ON UTN.sale.idProduct = UTN.serv.id WHERE utn.sale.status = 1 AND utn.sale.type = 'Service'", connection);
             command.CommandType = CommandType.Text;
             SqlDataAdapter data = new SqlDataAdapter(command);
             DataTable sales = new DataTable();

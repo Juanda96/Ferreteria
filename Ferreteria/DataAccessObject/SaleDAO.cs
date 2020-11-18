@@ -18,13 +18,23 @@ namespace DataAccessObject
             LinkedList<Sale> sales = new LinkedList<Sale>();
             DataTable dataSales = sda.selectSale();
             DataTableReader reader = dataSales.CreateDataReader();
+            int status = 0;
+            int delivery = 0;
             do
             {
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        Sale sale = new Sale(int.Parse(reader[0].ToString()), reader[1].ToString(), int.Parse(reader[2].ToString()),int.Parse(reader[3].ToString()),int.Parse(reader[4].ToString()),reader[5].ToString(),int.Parse(reader[6].ToString()),DateTime.Parse(reader[7].ToString()),int.Parse(reader[8].ToString()));
+                        if (bool.Parse(reader[6].ToString()))
+                        {
+                            status = 1;
+                        }
+                        if (bool.Parse(reader[8].ToString()))
+                        {
+                            delivery = 1;
+                        }
+                        Sale sale = new Sale(int.Parse(reader[0].ToString()), reader[1].ToString(), int.Parse(reader[2].ToString()),int.Parse(reader[3].ToString()),int.Parse(reader[4].ToString()),reader[5].ToString(), status, DateTime.Parse(reader[7].ToString()),delivery);
                         sales.AddLast(sale);
                     }
                 }
@@ -40,6 +50,73 @@ namespace DataAccessObject
         public DataTable getSaleClientDataTable()
         {
             return sda.selectSaleClients();
+        }
+
+        public LinkedList<Sale> selectSalesReport()
+        {
+            LinkedList<Sale> sales = new LinkedList<Sale>();
+            DataTable dataSales = sda.selectSalesReport();
+            DataTableReader reader = dataSales.CreateDataReader();
+            int status = 0;
+            int delivery = 0;
+            do
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        if (bool.Parse(reader[6].ToString()))
+                        {
+                            status = 1;
+                        }
+                        if (bool.Parse(reader[8].ToString()))
+                        {
+                            delivery = 1;
+                        }
+                        Sale sale = new Sale(int.Parse(reader[0].ToString()), reader[1].ToString(), int.Parse(reader[2].ToString()), int.Parse(reader[3].ToString()), int.Parse(reader[4].ToString()), reader[5].ToString(),status , DateTime.Parse(reader[7].ToString()), delivery);
+                        sales.AddLast(sale);
+                    }
+                }
+            } while (reader.NextResult());
+            return sales;
+            
+        }
+        public LinkedList<string> selectSalesReportCatProduct()
+        {
+            LinkedList<string> sales = new LinkedList<string>();
+            DataTable dataSales = sda.selectSalesReportCatProduct();
+            DataTableReader reader = dataSales.CreateDataReader();
+            do
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string obj = reader[1].ToString();
+                        sales.AddLast(obj);
+                    }
+                }
+            } while (reader.NextResult());
+            return sales;
+        }
+
+        public LinkedList<string> selectSalesReportCatService()
+        {
+            LinkedList<string> sales = new LinkedList<string>();
+            DataTable dataSales = sda.selectSalesReportCatService();
+            DataTableReader reader = dataSales.CreateDataReader();
+            do
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string obj = reader[1].ToString();
+                        sales.AddLast(obj);
+                    }
+                }
+            } while (reader.NextResult());
+            return sales;
         }
 
         public LinkedList<int> getSaleClientLink()

@@ -73,6 +73,16 @@ namespace Ferreteria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bar_chart {
+            get {
+                object obj = ResourceManager.GetObject("bar-chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carpenter {
             get {
                 object obj = ResourceManager.GetObject("carpenter", resourceCulture);

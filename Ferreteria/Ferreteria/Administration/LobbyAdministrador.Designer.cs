@@ -33,17 +33,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelButton = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTimer = new System.Windows.Forms.Label();
+            this.timerWelcome = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnTransport = new System.Windows.Forms.Button();
             this.btnService = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnWelcome = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelButton = new System.Windows.Forms.Panel();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblTimer = new System.Windows.Forms.Label();
-            this.timerWelcome = new System.Windows.Forms.Timer(this.components);
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +97,69 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(193, 788);
             this.panel5.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
+            this.label2.Location = new System.Drawing.Point(46, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Admin.";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // panelButton
+            // 
+            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
+            this.panelButton.Location = new System.Drawing.Point(194, 68);
+            this.panelButton.Name = "panelButton";
+            this.panelButton.Size = new System.Drawing.Size(10, 103);
+            this.panelButton.TabIndex = 6;
+            this.panelButton.Visible = false;
+            this.panelButton.Paint += new System.Windows.Forms.PaintEventHandler(this.panelButton_Paint);
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(568, 389);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 20);
+            this.lblDate.TabIndex = 8;
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblTimer.ForeColor = System.Drawing.Color.White;
+            this.lblTimer.Location = new System.Drawing.Point(680, 332);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(0, 24);
+            this.lblTimer.TabIndex = 7;
+            // 
+            // timerWelcome
+            // 
+            this.timerWelcome.Tick += new System.EventHandler(this.timerWelcome_Tick);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Ferreteria.Properties.Resources.bar_chart;
+            this.button1.Location = new System.Drawing.Point(1181, 603);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(193, 101);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Reportes";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnClose
             // 
@@ -206,57 +270,12 @@
             this.btnWelcome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnWelcome_MouseMove);
             this.btnWelcome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnWelcome_MouseUp);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
-            this.label2.Location = new System.Drawing.Point(46, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Admin.";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // panelButton
-            // 
-            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(33)))), ((int)(((byte)(122)))));
-            this.panelButton.Location = new System.Drawing.Point(194, 68);
-            this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(10, 103);
-            this.panelButton.TabIndex = 6;
-            this.panelButton.Visible = false;
-            this.panelButton.Paint += new System.Windows.Forms.PaintEventHandler(this.panelButton_Paint);
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(568, 389);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(0, 20);
-            this.lblDate.TabIndex = 8;
-            // 
-            // lblTimer
-            // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblTimer.ForeColor = System.Drawing.Color.White;
-            this.lblTimer.Location = new System.Drawing.Point(680, 332);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(0, 24);
-            this.lblTimer.TabIndex = 7;
-            // 
-            // timerWelcome
-            // 
-            this.timerWelcome.Tick += new System.EventHandler(this.timerWelcome_Tick);
-            // 
             // LobbyAdministrador
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.panel5);
@@ -293,5 +312,6 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Timer timerWelcome;
+        private System.Windows.Forms.Button button1;
     }
 }

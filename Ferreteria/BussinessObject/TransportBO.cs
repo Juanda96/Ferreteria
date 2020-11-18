@@ -12,11 +12,17 @@ namespace BussinessObject
     public class TransportBO
     {
         TransportDAO tdao = new TransportDAO();
+
+        /*
+         * GET ALL TRANSPORT LINKEDLIST
+         */
         public LinkedList<Transport> getLinkedTransport()
         {
             return tdao.getTransportLink();
         }
-
+        /*
+         * GET ALL TRANSPORT DATATABLE
+         */
         public DataTable getTransportDataTable()
         {
             return tdao.getTransportDataTable();
@@ -57,11 +63,16 @@ namespace BussinessObject
         {
             tdao.updateStatus(status, idCar);
         }
+        /*
+         * GET TRANSPORT STATUS DATATABLE
+         */
         public DataTable selectTransportStatus()
         {
             return tdao.selectTransportStatus();
         }
-
+        /*
+         * GET TRANSPORT STATUS DATATABLE
+         */
         public DataTable selectTransportStatus1()
         {
             return tdao.selectTransportStatus1();

@@ -25,11 +25,13 @@ namespace Ferreteria.Transportist
 
         private void button1_Click(object sender, EventArgs e)
         {
-            t.updateStatus(0, "ABC345");
-            dgvStatus.DataSource = t.selectTransportStatus();
-          
-            MessageBox.Show("Vehículo Disponible");
+            if (!(string.IsNullOrEmpty(cmbCamion.Text)))
+            {
+                t.updateStatus(0, cmbCamion.Text);
+                dgvStatus.DataSource = t.selectTransportStatus();
 
+                MessageBox.Show("Vehículo Disponible");
+            }
         }
 
 

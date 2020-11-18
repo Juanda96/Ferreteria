@@ -13,7 +13,7 @@ namespace BussinessObject
     {
         SaleDAO sdao = new SaleDAO();
 
-
+        //GENERATE A RANDOM CODE TO MAKE A BILL
         public string generateCode()
         {
             int length = 4;
@@ -44,67 +44,94 @@ namespace BussinessObject
             Sale sale = new Sale(bill,idUser,idProduct,quantity,type,status,delivery);
             sdao.createSale(sale);
         }
-
+        /*
+        * GET ALL PRODUCT SOLD
+        */
         public LinkedList<string> selectSalesReportCatProduct()
         {
             return sdao.selectSalesReportCatProduct();
         }
-
+        /*
+         * GET ALL SERVICE SOLD
+         */
         public LinkedList<string> selectSalesReportCatService()
         {
             return sdao.selectSalesReportCatService();
         }
-
+        /*
+         * GET ALL SALES DATATABLE
+         */
         public DataTable selectSale() 
         {
             return sdao.getSaleDataTable();
         }
-
+        /*
+         * GET ALL SALES LINKEDLIST
+         */
         public LinkedList<Sale> selectSaleLink() 
         {
             return sdao.getSaleLink();
         }
 
-
+        /*
+         * GET ALL SALES WITH PAY STATUS = TRUE
+         */
         public DataTable selectSalePayment()
         {
             return sdao.getSaleDataTable();
         }
-
+        /*
+         * GET PRODUCT || SERVICE SALES WITH PAY STATUS = TRUE 
+         */
         public LinkedList<Sale> selectSalesReport()
         {
             return sdao.selectSalesReport();
         }
-
-            public DataTable selectSaleClientPayment()
+        /*
+         * GET ALL CLIENTS IDS WITH PAY STATUS = FALSE DATATABLE
+         */
+        public DataTable selectSaleClientPayment()
         {
             return sdao.getSaleClientDataTable();
         }
+        /*
+         * GET ALL CLIENTS IDS WITH PAY STATUS = FALSE LINKEDLIST
+         */
         public LinkedList<int> selectSaleClientLink()
         {
             return sdao.getSaleClientLink();
         }
-
+        /*
+         * GET ALL CLIENTS IDS WITH PAY STATUS = FALSE LINKEDLIST
+         */
         public LinkedList<Sale> selectSaleLinkPayment()
         {
             return sdao.getSaleLink();
         }
-
+        /*
+         * GET ESPECIFIC CLIENTS SALES WITH PAY STATUS = FALSE LINKEDLIST
+        */
         public DataTable selectSaleEspecificClientBuys(int id)
         {
             return sdao.getSpecificBuys(id);
         }
-
+        /*
+         * CHANGE STATUS PAY 
+        */
         public void changeStatus(int id) 
         {
             sdao.changeStatus(id);
         }
-
+        /*
+         * GET ESPECIFIC CLIENTS SALES WITH PAY STATUS = TRUE AND STATUS DELIVERY = FALSE DATATABLE
+        */
         public DataTable clientReadyTransport()
         {
             return sdao.clientReadyTransport();
         }
-
+        /*
+         * GET ESPECIFIC CLIENTS SALES WITH PAY STATUS = TRUE AND STATUS DELIVERY = FALSE LINKEDLIST
+        */
         public LinkedList<int> clientReadyTransportLink()
         {
             return sdao.clientReadyTransportLink();
@@ -116,7 +143,7 @@ namespace BussinessObject
         }
 
         /*
-         * method to change delivery by id
+         * CHANGE STATUS DELIVERY 
         */
         public void changeDelivery(int id)
         {

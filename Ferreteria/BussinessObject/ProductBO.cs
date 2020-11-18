@@ -12,21 +12,32 @@ namespace BussinessObject
     public class ProductBO
     {
         ProductDAO pdao = new ProductDAO();
+
+        /*
+         * GET PRODUCT IN LINKEDLIST
+         */
         public LinkedList<Product> getLinkedProduct()
         {
             return pdao.getProductLink();
         }
-
+        /*
+         * GET PRODUCT IN DATATABLE
+         */
         public DataTable getProductDataTable()
         {
             return pdao.getProductDataTable();
         }
-
+        /*
+         * GET PRODUCT SOLD IN LINKEDLIST 
+         */
         public LinkedList<Product> getLinkedProductSales()
         {
             return pdao.getProductLinkSales();
         }
 
+        /*
+         * GET PRODUCT SOLD IN DATATABLE 
+         */
         public DataTable getProductDataTableSales()
         {
             return pdao.getProductDataTableSales();
@@ -41,7 +52,8 @@ namespace BussinessObject
             pdao.addProduct(newProduct);
         }
 
-        /*Method to update an already registered or created product
+        /*
+         * Method to update an already registered or created product
          */
 
         public void updateProduct(string name, string category, string description, int price,int quantity, int oldId)

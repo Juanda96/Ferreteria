@@ -12,16 +12,23 @@ namespace BussinessObject
     public class ServiceBO
     {
         ServiceDAO sDao = new ServiceDAO();
-
+        /*
+         * GET ALL SERVICE DATATABLE
+         */
         public DataTable getServDataTable()
         {
             return sDao.getServDataTable();
         }
+        /*
+         * GET ALL SERVICE LINKEDLIST
+         */
         public LinkedList<Service> getLinkedServ()
         {
             return sDao.getServLink();
         }
-
+        /*
+         * GET ALL SERVICE DATATABLE
+         */
         public DataTable getServDataTableSale()
         {
             return sDao.getServDataTableSale();
